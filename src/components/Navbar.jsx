@@ -3,6 +3,7 @@ import { Menu, X } from 'lucide-react';
 
 
 import logoNav from '../assets/logo_nav_final_v2.png';
+import logoNavV3 from '../assets/logo_nav_v3.png';
 
 const Navbar = ({ setView, scrollToSection }) => {
     const [isOpen, setIsOpen] = useState(false);
@@ -52,18 +53,18 @@ const Navbar = ({ setView, scrollToSection }) => {
     ];
 
     return (
-        <nav className={`fixed w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-white shadow-md py-4' : 'bg-transparent py-6'}`}>
+        <nav
+            className={`fixed w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-white shadow-md py-4' : 'bg-transparent py-6'}`}
+            style={!isScrolled ? { mixBlendMode: 'multiply' } : {}}
+        >
             <div className="container mx-auto px-6 flex justify-between items-center">
-                <a href="#" onClick={(e) => handleNavClick(e, 'home')} className={`flex items-center gap-3 text-2xl font-bold transition-colors ${isScrolled ? 'text-meditation-900' : 'text-meditation-800'}`}>
-                    <div className="w-10 h-10 rounded-full overflow-hidden flex-shrink-0 -mt-2 bg-[#f5f3ff]">
-                        <img
-                            src={logoNav}
-                            alt="현존명상센터 로고"
-                            className="w-full h-full object-cover mix-blend-multiply"
-                            style={{ transform: 'scale(1.2)', filter: 'contrast(1.25) brightness(1.1)' }}
-                        />
-                    </div>
-                    <span className="pt-1">현존명상센터</span>
+                <a href="#" onClick={(e) => handleNavClick(e, 'home')} className="flex items-center">
+                    <img
+                        src={logoNavV3}
+                        alt="현존명상센터"
+                        className="h-12 w-auto object-contain"
+                        style={{ filter: 'contrast(1.1) brightness(1.1)' }}
+                    />
                 </a>
 
                 {/* Desktop Menu */}

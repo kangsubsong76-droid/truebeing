@@ -3,8 +3,8 @@ import gallery3 from '../assets/images/gallery_3.jpg';
 import gallery2 from '../assets/images/gallery_2.png';
 import instructorYookyungTop from '../assets/images/instructor_yookyung_top.png';
 import instructorYookyungBottom from '../assets/images/instructor_yookyung_bottom.png';
-import instructorSuri from '../assets/images/instructor_suri_new.png';
-import instructorZeroNew from '../assets/images/instructor_zero_new.png';
+import instructorSuriV4 from '../assets/images/instructor_suri_v4.png';
+import instructorZeroV2 from '../assets/images/instructor_zero_v2.png';
 import instructorHeogong from '../assets/images/instructor_heogong.png';
 
 const CenterIntro = () => {
@@ -37,22 +37,22 @@ const CenterIntro = () => {
                     <div className="bg-meditation-50 p-6 md:p-8 rounded-3xl text-center hover:shadow-lg transition-transform hover:-translate-y-1">
                         <div className="w-12 h-12 bg-meditation-200 rounded-full flex items-center justify-center mx-auto mb-4 md:mb-6 text-2xl">🌱</div>
                         <h3 className="font-bold text-lg md:text-xl text-meditation-900 mb-3 md:mb-4 break-keep">2009년 설립</h3>
-                        <p className="text-gray-600 text-sm leading-relaxed">
-                            오랜 시간 검증된<br />정통 명상 교육 기관
+                        <p className="text-gray-600 text-sm leading-relaxed break-keep">
+                            오랜 시간 검증된 정통 명상 교육 기관
                         </p>
                     </div>
                     <div className="bg-meditation-50 p-6 md:p-8 rounded-3xl text-center hover:shadow-lg transition-transform hover:-translate-y-1">
                         <div className="w-12 h-12 bg-meditation-200 rounded-full flex items-center justify-center mx-auto mb-4 md:mb-6 text-2xl">🧘</div>
                         <h3 className="font-bold text-lg md:text-xl text-meditation-900 mb-3 md:mb-4 break-keep">정통 사마타</h3>
-                        <p className="text-gray-600 text-sm leading-relaxed">
-                            마음의 실체를 통찰하며,<br />진아, 순수의식을 지향
+                        <p className="text-gray-600 text-sm leading-relaxed break-keep">
+                            마음의 실체를 통찰하며, 진아, 순수의식을 지향
                         </p>
                     </div>
                     <div className="bg-meditation-50 p-6 md:p-8 rounded-3xl text-center hover:shadow-lg transition-transform hover:-translate-y-1">
                         <div className="w-12 h-12 bg-meditation-200 rounded-full flex items-center justify-center mx-auto mb-4 md:mb-6 text-2xl">🌲</div>
                         <h3 className="font-bold text-lg md:text-xl text-meditation-900 mb-3 md:mb-4 break-keep">성북동 확장이전</h3>
-                        <p className="text-gray-600 text-sm leading-relaxed">
-                            2024년 8월,<br />도심속 골목안 아늑한 명상 공간
+                        <p className="text-gray-600 text-sm leading-relaxed break-keep">
+                            2024년 8월, 도심속 골목안 아늑한 명상 공간
                         </p>
                     </div>
                 </div>
@@ -89,7 +89,7 @@ const CenterIntro = () => {
                                 그 현존(Truebeing)의 빛을 여러분과 나누고 싶습니다."
                             </blockquote>
 
-                            <p className="text-gray-300 leading-relaxed mb-6 font-light text-left">
+                            <p className="text-gray-300 leading-relaxed mb-6 font-light text-left break-keep">
                                 어린 시절부터 이어진 신체적, 심리적 고통을 극복하기 위해 요가와 명상을 시작했습니다.
                                 끈질긴 수행 끝에 마음이 사라지고 의식만 남는 '현존' 상태를 체험한 후,
                                 이를 체계적인 교육 프로그램으로 정립하여 현존명상센터를 설립했습니다.
@@ -110,12 +110,17 @@ const CenterIntro = () => {
                     {/* Instructor 1: Suri */}
                     <div className="text-center group">
                         <div className="w-40 h-40 md:w-48 md:h-48 mx-auto rounded-full overflow-hidden mb-6 shadow-lg border-4 border-white group-hover:border-meditation-200 transition-all">
-                            <img src={instructorSuri} alt="수리 선생님" className="w-full h-full object-cover" />
+                            <img
+                                src={instructorSuriV4}
+                                alt="수리 선생님"
+                                className="w-full h-full object-cover"
+                                style={{ filter: 'brightness(1.2) contrast(1.05)', transform: 'scale(1.1)' }}
+                            />
                         </div>
                         <h3 className="text-xl font-bold text-gray-900 mb-1">수리 (Suri)</h3>
                         <p className="text-meditation-600 text-sm font-medium mb-4">아사나 명상 지도자</p>
-                        <p className="text-gray-600 text-sm leading-relaxed px-4">
-                            "몸을 통해 마음을 봅니다."<br />
+                        <p className="text-gray-600 text-sm leading-relaxed px-4 break-keep">
+                            "몸을 통해 마음을 봅니다."
                             따뜻하고 섬세한 지도로 몸의 균형과 마음의 안정을 찾아드립니다.
                         </p>
                     </div>
@@ -127,8 +132,8 @@ const CenterIntro = () => {
                         </div>
                         <h3 className="text-xl font-bold text-gray-900 mb-1">허공 (Heogong)</h3>
                         <p className="text-meditation-600 text-sm font-medium mb-4">아사나 명상 지도자</p>
-                        <p className="text-gray-600 text-sm leading-relaxed px-4">
-                            "무한한 가능성을 엽니다."<br />
+                        <p className="text-gray-600 text-sm leading-relaxed px-4 break-keep">
+                            "무한한 가능성을 엽니다."
                             닫힌 마음을 열고 허공처럼 넓은 의식의 확장을 경험하게 돕습니다.
                         </p>
                     </div>
@@ -136,12 +141,17 @@ const CenterIntro = () => {
                     {/* Instructor 3: Zero (Moved to Right) */}
                     <div className="text-center group">
                         <div className="w-40 h-40 md:w-48 md:h-48 mx-auto rounded-full overflow-hidden mb-6 shadow-lg border-4 border-white group-hover:border-meditation-200 transition-all">
-                            <img src={instructorZeroNew} alt="제로 선생님" className="w-full h-full object-cover" />
+                            <img
+                                src={instructorZeroV2}
+                                alt="제로 선생님"
+                                className="w-full h-full object-cover"
+                                style={{ filter: 'brightness(0.9)', transform: 'scale(1.05)' }}
+                            />
                         </div>
                         <h3 className="text-xl font-bold text-gray-900 mb-1">제로 (Zero)</h3>
                         <p className="text-meditation-600 text-sm font-medium mb-4">아사나 명상 지도자</p>
-                        <p className="text-gray-600 text-sm leading-relaxed px-4">
-                            "비움의 미학을 실천합니다."<br />
+                        <p className="text-gray-600 text-sm leading-relaxed px-4 break-keep">
+                            "비움의 미학을 실천합니다."
                             복잡한 생각을 내려놓고 0(Zero)의 상태로 돌아가는 시간을 안내합니다.
                         </p>
                     </div>

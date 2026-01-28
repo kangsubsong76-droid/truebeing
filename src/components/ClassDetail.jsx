@@ -36,7 +36,7 @@ const ClassDetail = () => {
                             <span className="px-3 py-1 bg-gray-100 text-gray-600 text-xs font-bold rounded-full">최대 6명</span>
                         </div>
                         <h2 className="text-3xl font-bold text-meditation-900 mb-6">소그룹 명상 수업</h2>
-                        <p className="text-gray-700 leading-relaxed mb-6">
+                        <p className="text-gray-700 leading-relaxed mb-6 break-keep">
                             사마타 명상의 기초부터 심화까지 체계적으로 배우는 정규 과정입니다.
                             소수 정예로 진행되어 깊이 있는 수련이 가능합니다.
                         </p>
@@ -79,7 +79,7 @@ const ClassDetail = () => {
                                 <span className="px-3 py-1 bg-white border border-gray-200 text-gray-600 text-xs font-bold rounded-full">대표 유경선생님 직강</span>
                             </div>
                             <h2 className="text-3xl font-bold text-meditation-900 mb-6">1:1 개인 수업</h2>
-                            <p className="text-gray-700 leading-relaxed mb-6">
+                            <p className="text-gray-700 leading-relaxed mb-6 break-keep">
                                 현존명상센터 대표 유경선생님이 직접 지도하는 프라이빗 세션입니다.
                                 명상에 대한 근본적인 개념 정리부터 개인의 심리/신체 상태에 맞춘 구체적인 솔루션을 제공합니다.
                             </p>
@@ -106,10 +106,10 @@ const ClassDetail = () => {
                         <span className="text-meditation-500 font-bold tracking-wider">8 MONTHS</span>
                         <h3 className="text-2xl font-bold text-gray-900 mt-2">1:1 도제식 전문가 과정</h3>
                     </div>
-                    <p className="text-gray-600 leading-relaxed mb-8 max-w-2xl mx-auto">
-                        현존명상의 사마타 명상법과 지도 노하우를 전수받는 전문가 과정입니다.<br />
-                        요가 명상 이론, 아사나 실행법, 티칭 스킬 등 지도자로서 갖춰야 할 모든 것을<br />
-                        <strong>1:1 도제식 수업</strong>으로 깊이 있게 배웁니다.
+                    <p className="text-gray-600 leading-relaxed mb-8 max-w-2xl mx-auto break-keep">
+                        현존명상의 사마타 명상법과 지도 노하우를 전수받는 전문가 과정입니다.
+                        요가 명상 이론, 아사나 실행법, 티칭 스킬 등 지도자로서 갖춰야 할 모든 것을
+                        <strong> 1:1 도제식 수업</strong>으로 깊이 있게 배웁니다.
                     </p>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-left max-w-2xl mx-auto mb-8">
                         <div className="bg-gray-50 p-4 rounded-xl text-sm text-gray-700">

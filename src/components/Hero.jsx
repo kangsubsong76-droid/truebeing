@@ -12,7 +12,12 @@ const Hero = () => {
 
             <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
                 <div className="flex justify-center mb-10 md:mb-16">
-                    <img src={logoHero} alt="현존명상" className="w-24 md:w-32 lg:w-40 h-auto animate-fade-in-up" />
+                    <img
+                        src={logoHero}
+                        alt="현존명상"
+                        className="w-28 md:w-40 lg:w-48 h-auto animate-fade-in-up"
+                        style={{ mixBlendMode: 'multiply', filter: 'contrast(1.1) brightness(1.1)' }}
+                    />
                 </div>
                 <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-meditation-900 mb-6 md:mb-8 leading-tight break-keep">
                     당신이 찾던 올바른 명상
