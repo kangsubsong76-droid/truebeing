@@ -54,8 +54,8 @@ const Navbar = ({ setView, scrollToSection }) => {
 
     return (
         <nav
-            className={`fixed w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-white shadow-md py-4' : 'bg-transparent py-6'}`}
-            style={!isScrolled ? { mixBlendMode: 'multiply' } : {}}
+            className={`fixed w-full z-50 transition-all duration-300 ${isScrolled || isOpen ? 'bg-white shadow-md py-4' : 'bg-transparent py-6'}`}
+            style={!isScrolled && !isOpen ? { mixBlendMode: 'multiply' } : {}}
         >
             <div className="container mx-auto px-6 flex justify-between items-center">
                 <a href="#" onClick={(e) => handleNavClick(e, 'home')} className="flex items-center">
