@@ -1,9 +1,9 @@
 import React from 'react';
 
 import effect1 from '../assets/images/effect_1.jpg';
-import effect2 from '../assets/images/effect_2.jpg';
-import effect3 from '../assets/images/effect_3.png';
-import effect4 from '../assets/images/effect_4.png';
+import effect2 from '../assets/images/effect_1_new.png';
+import effect3 from '../assets/images/effect_3_asian.png';
+import effect4 from '../assets/images/effect_4_asian.png';
 
 const effects = [
     {
@@ -44,6 +44,7 @@ const EffectsSection = () => {
                                     src={effect.image}
                                     alt={effect.title}
                                     className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
+                                    style={{ filter: effect.title === '신체능력 향상' ? 'brightness(1.2)' : 'none' }}
                                     onError={(e) => {
                                         e.target.onerror = null;
                                         e.target.src = 'https://placehold.co/400x600/top'; // Fallback

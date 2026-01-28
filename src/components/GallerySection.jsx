@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 import gallery1 from '../assets/images/gallery_1.png';
-import gallery2 from '../assets/images/gallery_2.jpg';
+import gallery2 from '../assets/images/gallery_2.png';
 import gallery3 from '../assets/images/gallery_3.png';
 import gallery4 from '../assets/images/gallery_4.png';
 import gallery5 from '../assets/images/gallery_5.png';
@@ -24,7 +24,21 @@ const classImages = [
 
 const GallerySection = () => {
     const [currentIndex, setCurrentIndex] = useState(0);
-    const itemsToShow = 3;
+    const [itemsToShow, setItemsToShow] = useState(3);
+
+    useEffect(() => {
+        const handleResize = () => {
+            if (window.innerWidth < 768) {
+                setItemsToShow(1);
+            } else {
+                setItemsToShow(3);
+            }
+        };
+
+        handleResize();
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
 
     const nextSlide = () => {
         setCurrentIndex((prev) =>
@@ -42,7 +56,7 @@ const GallerySection = () => {
     useEffect(() => {
         const timer = setInterval(nextSlide, 5000);
         return () => clearInterval(timer);
-    }, []);
+    }, [itemsToShow]);
 
     return (
         <section id="archive" className="py-20 bg-white overflow-hidden">
@@ -53,14 +67,16 @@ const GallerySection = () => {
 
                 <div className="relative max-w-6xl mx-auto">
                     {/* Slider Container */}
-                    <div className="overflow-hidden">
+                    <div className="overflow-hidden px-4 md:px-0">
                         <div
-                            className="flex transition-transform duration-500 ease-in-out gap-4"
-                            style={{ transform: `translateX(-${currentIndex * (100 / itemsToShow)}%)` }}
+                            className="flex transition-transform duration-500 ease-in-out"
+                            style={{
+                                transform: `translateX(-${currentIndex * (100 / itemsToShow)}%)`
+                            }}
                         >
                             {classImages.map((src, index) => (
-                                <div key={index} className="w-1/3 flex-shrink-0 px-2">
-                                    <div className="aspect-[4/3] rounded-2xl overflow-hidden bg-gray-200">
+                                <div key={index} className="w-full md:w-1/3 flex-shrink-0 px-2">
+                                    <div className="aspect-[4/3] rounded-2xl overflow-hidden bg-gray-200 shadow-md">
                                         <img
                                             src={src}
                                             alt={`Class scene ${index + 1}`}

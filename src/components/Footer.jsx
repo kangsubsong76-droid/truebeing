@@ -8,9 +8,9 @@ const Footer = () => {
                     <div>
                         <h3 className="text-xl md:text-2xl font-bold text-white mb-4 md:mb-6">현존명상센터</h3>
                         <p className="leading-relaxed opacity-80 text-sm md:text-base">
-                            큰 용기가 필요한 삶의 변화,<br />
+                            당신이 진정으로 원하는 삶의 변화,<br />
                             마음에서 벗어난 찰나에서 시작됩니다.<br />
-                            바른 명상으로 나를 회복하는 도심 속 쉼의 공간.
+                            참된 나를 회복하는 도심 속 쉼의 공간.
                         </p>
                     </div>
                     <div className="md:col-span-1">

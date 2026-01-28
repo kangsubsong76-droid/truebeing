@@ -1,6 +1,7 @@
 import React from 'react';
 import gallery1 from '../assets/images/gallery_1.png';
 import gallery5 from '../assets/images/gallery_5.png';
+import classPrivateWarm from '../assets/images/class_private_warm.png';
 
 const ClassDetail = () => {
     return (
@@ -66,7 +67,7 @@ const ClassDetail = () => {
                         <div className="lg:w-1/2">
                             <div className="rounded-2xl overflow-hidden shadow-lg h-80">
                                 <img
-                                    src={gallery5}
+                                    src={classPrivateWarm}
                                     alt="Private Session"
                                     className="w-full h-full object-cover"
                                 />
@@ -77,7 +78,7 @@ const ClassDetail = () => {
                                 <span className="px-3 py-1 bg-meditation-600 text-white text-xs font-bold rounded-full">Premium</span>
                                 <span className="px-3 py-1 bg-white border border-gray-200 text-gray-600 text-xs font-bold rounded-full">대표 유경선생님 직강</span>
                             </div>
-                            <h2 className="text-3xl font-bold text-meditation-900 mb-6">1:1 개인 명상</h2>
+                            <h2 className="text-3xl font-bold text-meditation-900 mb-6">1:1 개인 수업</h2>
                             <p className="text-gray-700 leading-relaxed mb-6">
                                 현존명상센터 대표 유경선생님이 직접 지도하는 프라이빗 세션입니다.
                                 명상에 대한 근본적인 개념 정리부터 개인의 심리/신체 상태에 맞춘 구체적인 솔루션을 제공합니다.

@@ -10,7 +10,7 @@ const Introduction = () => {
                 <h2 className="text-3xl md:text-5xl font-bold text-meditation-950 mb-8 leading-tight break-keep">
                     현존(現存)<br className="hidden md:block" />{/* Mobile: straight text, Desktop: break */}
                     <span className="text-xl md:text-3xl font-light text-meditation-800 mt-2 block">
-                        지금, 여기에 깨어있음
+                        마음이 사라진 찰나
                     </span>
                 </h2>
                 <div className="w-16 h-1 bg-meditation-300 mx-auto mb-8 md:mb-10"></div>

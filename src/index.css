@@ -25,6 +25,18 @@
 
 @layer base {
   body {
-    @apply antialiased text-gray-800 bg-white;
+    @apply antialiased text-gray-800 bg-white break-keep;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  li,
+  blockquote {
+    @apply break-keep;
   }
 }

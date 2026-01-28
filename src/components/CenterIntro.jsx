@@ -1,8 +1,10 @@
 import React from 'react';
 import gallery3 from '../assets/images/gallery_3.jpg';
-import gallery2 from '../assets/images/gallery_2.jpg';
-import instructorSuri from '../assets/images/instructor_suri.png';
-import instructorZero from '../assets/images/instructor_zero.png';
+import gallery2 from '../assets/images/gallery_2.png';
+import instructorYookyungTop from '../assets/images/instructor_yookyung_top.png';
+import instructorYookyungBottom from '../assets/images/instructor_yookyung_bottom.png';
+import instructorSuri from '../assets/images/instructor_suri_new.png';
+import instructorZeroNew from '../assets/images/instructor_zero_new.png';
 import instructorHeogong from '../assets/images/instructor_heogong.png';
 
 const CenterIntro = () => {
@@ -60,13 +62,20 @@ const CenterIntro = () => {
             <section className="bg-meditation-900 text-white py-16 md:py-24 mb-20 md:mb-32">
                 <div className="container mx-auto px-6 max-w-5xl">
                     <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12">
-                        <div className="w-full md:w-1/3 max-w-sm">
-                            <div className="aspect-[3/4] rounded-2xl overflow-hidden bg-gray-800 shadow-2xl border-4 border-meditation-800">
-                                {/* Placeholder for Founder Image */}
+                        <div className="w-full md:w-1/3 max-w-sm flex flex-col gap-4">
+                            <div className="rounded-2xl overflow-hidden bg-gray-800 shadow-xl border-4 border-meditation-800">
                                 <img
-                                    src={gallery2}
-                                    alt="현존 유경 대표"
+                                    src={instructorYookyungTop}
+                                    alt="현존 유경 대표 수업"
                                     className="w-full h-full object-cover opacity-90"
+                                />
+                            </div>
+                            <div className="rounded-2xl overflow-hidden bg-gray-800 shadow-xl border-4 border-meditation-800">
+                                <img
+                                    src={instructorYookyungBottom}
+                                    alt="현존 유경 대표 미소"
+                                    className="w-full h-full object-cover opacity-90"
+                                    style={{ filter: 'brightness(1.2)' }}
                                 />
                             </div>
                         </div>
@@ -98,7 +107,7 @@ const CenterIntro = () => {
             <section className="container mx-auto px-6 max-w-6xl">
                 <h2 className="text-2xl md:text-3xl font-bold text-center text-meditation-900 mb-10 md:mb-16 break-keep">함께하는 지도자들</h2>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-10">
-                    {/* Instructor 1 */}
+                    {/* Instructor 1: Suri */}
                     <div className="text-center group">
                         <div className="w-40 h-40 md:w-48 md:h-48 mx-auto rounded-full overflow-hidden mb-6 shadow-lg border-4 border-white group-hover:border-meditation-200 transition-all">
                             <img src={instructorSuri} alt="수리 선생님" className="w-full h-full object-cover" />
@@ -111,20 +120,7 @@ const CenterIntro = () => {
                         </p>
                     </div>
 
-                    {/* Instructor 2 */}
-                    <div className="text-center group">
-                        <div className="w-40 h-40 md:w-48 md:h-48 mx-auto rounded-full overflow-hidden mb-6 shadow-lg border-4 border-white group-hover:border-meditation-200 transition-all">
-                            <img src={instructorZero} alt="제로 선생님" className="w-full h-full object-cover" />
-                        </div>
-                        <h3 className="text-xl font-bold text-gray-900 mb-1">제로 (Zero)</h3>
-                        <p className="text-meditation-600 text-sm font-medium mb-4">아사나 명상 지도자</p>
-                        <p className="text-gray-600 text-sm leading-relaxed px-4">
-                            "비움의 미학을 실천합니다."<br />
-                            복잡한 생각을 내려놓고 0(Zero)의 상태로 돌아가는 시간을 안내합니다.
-                        </p>
-                    </div>
-
-                    {/* Instructor 3 */}
+                    {/* Instructor 2: Heogong (Moved to Center) */}
                     <div className="text-center group">
                         <div className="w-40 h-40 md:w-48 md:h-48 mx-auto rounded-full overflow-hidden mb-6 shadow-lg border-4 border-white group-hover:border-meditation-200 transition-all">
                             <img src={instructorHeogong} alt="허공 선생님" className="w-full h-full object-cover" />
@@ -134,6 +130,19 @@ const CenterIntro = () => {
                         <p className="text-gray-600 text-sm leading-relaxed px-4">
                             "무한한 가능성을 엽니다."<br />
                             닫힌 마음을 열고 허공처럼 넓은 의식의 확장을 경험하게 돕습니다.
+                        </p>
+                    </div>
+
+                    {/* Instructor 3: Zero (Moved to Right) */}
+                    <div className="text-center group">
+                        <div className="w-40 h-40 md:w-48 md:h-48 mx-auto rounded-full overflow-hidden mb-6 shadow-lg border-4 border-white group-hover:border-meditation-200 transition-all">
+                            <img src={instructorZeroNew} alt="제로 선생님" className="w-full h-full object-cover" />
+                        </div>
+                        <h3 className="text-xl font-bold text-gray-900 mb-1">제로 (Zero)</h3>
+                        <p className="text-meditation-600 text-sm font-medium mb-4">아사나 명상 지도자</p>
+                        <p className="text-gray-600 text-sm leading-relaxed px-4">
+                            "비움의 미학을 실천합니다."<br />
+                            복잡한 생각을 내려놓고 0(Zero)의 상태로 돌아가는 시간을 안내합니다.
                         </p>
                     </div>
                 </div>

@@ -26,7 +26,29 @@ GitHub에 코드가 올라가 있다면, 아래 절차대로 진행하시면 됩
 - Build command: `npm run build`
 - Build output directory: `dist`
 
-## 4. 배포 시작
+## 4. How to Update Your Website
+
+Cloudflare Pages automatically deploys your site whenever you push changes to the `main` branch of your GitHub repository.
+
+To update your live site:
+
+1.  **Make changes** to your code locally.
+2.  **Open your terminal** and run the following commands:
+
+    ```bash
+    # Stage all changes
+    git add .
+
+    # Commit changes with a message describing what you did
+    git commit -m "Update homepage text"
+
+    # Push to GitHub
+    git push
+    ```
+
+3.  **Wait a moment**: Cloudflare will detect the new commit, build your site, and deploy the updates automatically (usually takes 1-2 minutes).
+
+## 5. 배포 시작
 1. 맨 아래 **"Save and Deploy"** 버튼을 클릭합니다.
 2. "Building..." 화면이 나오며 배포가 진행됩니다 (약 1~2분 소요).
 3. 완료되면 **"Continue to project"**를 누르고, 상단의 사이트 링크(`https://....pages.dev`)를 클릭하여 접속을 확인합니다.
