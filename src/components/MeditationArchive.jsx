@@ -1,13 +1,13 @@
 import React from 'react';
-import archiveEssay from '../assets/images/archive_essay.png';
-import archiveEssay2 from '../assets/images/archive_essay_2.png';
-import archiveEssay3 from '../assets/images/archive_essay_3.png';
-import archiveSpiritual from '../assets/images/archive_spiritual.png';
+import archiveMystery from '../assets/images/archive_mystery.png';
+import archiveUniverse from '../assets/images/archive_universe.jpg';
+import archiveFood from '../assets/images/archive_food.jpg';
+import archiveSuffering from '../assets/images/archive_suffering.png';
 import archiveSpiritual2 from '../assets/images/archive_spiritual_2.png';
-import archiveSpiritual3 from '../assets/images/archive_spiritual_3.png';
-import archiveJournal from '../assets/images/archive_journal.png';
-import archiveJournal2 from '../assets/images/archive_journal_2.png';
-import archiveJournal3 from '../assets/images/archive_journal_3.png';
+import archiveLandscape from '../assets/images/archive_landscape.jpg';
+import archiveRoom from '../assets/images/archive_room.jpg';
+import archiveSand from '../assets/images/archive_sand.png';
+import archiveTogether from '../assets/images/archive_together.png';
 
 const MeditationArchive = () => {
     const archiveSections = [
@@ -20,21 +20,21 @@ const MeditationArchive = () => {
                     id: 101,
                     link: "https://cafe.naver.com/f-e/cafes/19337483/articles/5469?menuid=67&referrerAllArticles=false",
                     summary: "네이버 카페에서 원문을 확인하세요.",
-                    image: archiveEssay,
+                    image: archiveMystery,
                     title: "신비현상은 아무런 의미도 없다"
                 },
                 {
                     id: 102,
                     link: "https://cafe.naver.com/f-e/cafes/19337483/articles/4988?menuid=67&referrerAllArticles=false",
                     summary: "네이버 카페에서 원문을 확인하세요.",
-                    image: archiveEssay2,
+                    image: archiveUniverse,
                     title: "깨어나기 위한 3가지 필수 조건"
                 },
                 {
                     id: 103,
                     link: "https://cafe.naver.com/f-e/cafes/19337483/articles/4504?menuid=67&referrerAllArticles=false",
                     summary: "네이버 카페에서 원문을 확인하세요.",
-                    image: archiveEssay3,
+                    image: archiveFood,
                     title: "음식을 절제하지 않으면 명상 할 수 없다"
                 }
             ]
@@ -48,7 +48,7 @@ const MeditationArchive = () => {
                     id: 201,
                     link: "https://cafe.naver.com/f-e/cafes/19337483/articles/5354?boardtype=L&menuid=8&referrerAllArticles=false",
                     summary: "네이버 카페에서 원문을 확인하세요.",
-                    image: archiveSpiritual,
+                    image: archiveSuffering,
                     title: "힘든일에 직면했을때"
                 },
                 {
@@ -62,7 +62,7 @@ const MeditationArchive = () => {
                     id: 203,
                     link: "https://cafe.naver.com/f-e/cafes/19337483/articles/4545?boardtype=L&menuid=8&referrerAllArticles=false",
                     summary: "네이버 카페에서 원문을 확인하세요.",
-                    image: archiveSpiritual3,
+                    image: archiveLandscape,
                     title: "명상을 하면 삶이 평화로워질까?"
                 }
             ]
@@ -76,21 +76,21 @@ const MeditationArchive = () => {
                     id: 301,
                     link: "https://cafe.naver.com/f-e/cafes/19337483/articles/4565?menuid=36&referrerAllArticles=false",
                     summary: "네이버 카페에서 원문을 확인하세요.",
-                    image: archiveJournal,
+                    image: archiveRoom,
                     title: "오직 본질로서 거(居)하라"
                 },
                 {
                     id: 302,
                     link: "https://cafe.naver.com/f-e/cafes/19337483/articles/4526?menuid=36&referrerAllArticles=false",
                     summary: "네이버 카페에서 원문을 확인하세요.",
-                    image: archiveJournal2,
+                    image: archiveSand,
                     title: "명상이 무엇인가?"
                 },
                 {
                     id: 303,
                     link: "https://cafe.naver.com/f-e/cafes/19337483/articles/4513?menuid=36&referrerAllArticles=false",
                     summary: "네이버 카페에서 원문을 확인하세요.",
-                    image: archiveJournal3,
+                    image: archiveTogether,
                     title: "함께 수행해야 하는 이유"
                 }
             ]
