@@ -1,4 +1,5 @@
 import React from 'react';
+import { Instagram, Youtube, Coffee, FileText, MapPin, Phone, Mail } from 'lucide-react';
 
 const Footer = () => {
     return (
@@ -17,61 +18,75 @@ const Footer = () => {
                         <h4 className="text-lg font-bold text-white mb-4 md:mb-6">Contact Us</h4>
                         <ul className="space-y-3 md:space-y-4 opacity-80 text-sm">
                             <li className="flex items-start gap-3">
-                                <span className="font-bold w-16 shrink-0">Address</span>
+                                <MapPin className="w-5 h-5 mt-0.5 shrink-0" />
                                 <span>서울시 성북구 성북로 15길 15-2 (2F)<br />(최순우 옛집 골목 안)</span>
                             </li>
                             <li className="flex items-center gap-3">
-                                <span className="font-bold w-16 shrink-0">Tel</span>
+                                <Phone className="w-5 h-5 shrink-0" />
                                 <span>010-3188-3105</span>
                             </li>
                             <li className="flex items-center gap-3">
-                                <span className="font-bold w-16 shrink-0">Email</span>
+                                <Mail className="w-5 h-5 shrink-0" />
                                 <span>truebeing-meditation@naver.com</span>
                             </li>
                         </ul>
                     </div>
                     <div className="md:col-span-1">
                         <h4 className="text-lg font-bold text-white mb-4 md:mb-6">Follow Us</h4>
-                        <div className="flex flex-col space-y-3 md:space-y-4">
+                        {/* Mobile: Grid 2 cols, Desktop: Flex col */}
+                        <div className="grid grid-cols-2 gap-3 md:flex md:flex-col md:space-y-4">
                             <a
                                 href="https://www.instagram.com/truebeing_meditation/"
                                 target="_blank"
                                 rel="noreferrer"
-                                className="flex items-center gap-3 hover:text-white transition-colors opacity-80 hover:opacity-100"
+                                className="flex items-center gap-3 hover:text-white transition-colors opacity-80 hover:opacity-100 p-2 md:p-0 bg-meditation-900 md:bg-transparent rounded-lg md:rounded-none"
                             >
-                                <span className="font-bold">Instagram</span>
-                                <span className="text-sm">@truebeing_meditation</span>
+                                <Instagram className="w-5 h-5 shrink-0" />
+                                <div className="flex flex-col">
+                                    <span className="font-bold text-sm md:text-base">Instagram</span>
+                                    <span className="text-xs hidden md:inline">@truebeing_meditation</span>
+                                </div>
                             </a>
                             <a
                                 href="https://cafe.naver.com/bhakti"
                                 target="_blank"
                                 rel="noreferrer"
-                                className="flex items-center gap-3 hover:text-white transition-colors opacity-80 hover:opacity-100"
+                                className="flex items-center gap-3 hover:text-white transition-colors opacity-80 hover:opacity-100 p-2 md:p-0 bg-meditation-900 md:bg-transparent rounded-lg md:rounded-none"
                             >
-                                <span className="font-bold">Naver Cafe</span>
-                                <span className="text-sm">현존명상센터 카페</span>
+                                <Coffee className="w-5 h-5 shrink-0" />
+                                <div className="flex flex-col">
+                                    <span className="font-bold text-sm md:text-base">Naver Cafe</span>
+                                    <span className="text-xs hidden md:inline">현존명상센터 카페</span>
+                                </div>
                             </a>
                             <a
                                 href="https://blog.naver.com/truebeing-meditation"
                                 target="_blank"
                                 rel="noreferrer"
-                                className="flex items-center gap-3 hover:text-white transition-colors opacity-80 hover:opacity-100"
+                                className="flex items-center gap-3 hover:text-white transition-colors opacity-80 hover:opacity-100 p-2 md:p-0 bg-meditation-900 md:bg-transparent rounded-lg md:rounded-none"
                             >
-                                <span className="font-bold">Blog</span>
-                                <span className="text-sm">네이버 블로그</span>
+                                <FileText className="w-5 h-5 shrink-0" />
+                                <div className="flex flex-col">
+                                    <span className="font-bold text-sm md:text-base">Blog</span>
+                                    <span className="text-xs hidden md:inline">네이버 블로그</span>
+                                </div>
                             </a>
                             <a
                                 href="https://www.youtube.com/@truebeing-meditation"
                                 target="_blank"
                                 rel="noreferrer"
-                                className="flex items-center gap-3 hover:text-white transition-colors opacity-80 hover:opacity-100"
+                                className="flex items-center gap-3 hover:text-white transition-colors opacity-80 hover:opacity-100 p-2 md:p-0 bg-meditation-900 md:bg-transparent rounded-lg md:rounded-none"
                             >
-                                <span className="font-bold">YouTube</span>
-                                <span className="text-sm">현존명상센터 공식채널</span>
+                                <Youtube className="w-5 h-5 shrink-0" />
+                                <div className="flex flex-col">
+                                    <span className="font-bold text-sm md:text-base">YouTube</span>
+                                    <span className="text-xs hidden md:inline">현존명상센터 공식채널</span>
+                                </div>
                             </a>
                         </div>
                     </div>
                 </div>
+
                 <div className="border-t border-meditation-800 pt-8 text-center text-xs md:text-sm opacity-60">
                     <div className="flex flex-col md:flex-row justify-between items-center gap-4">
                         <p>&copy; 2024 현존명상센터 (Truebeing Meditation Center). All rights reserved.</p>
