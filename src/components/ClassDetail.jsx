@@ -1,7 +1,7 @@
 import React from 'react';
 import gallery1 from '../assets/images/gallery_1.png';
 import gallery5 from '../assets/images/gallery_5.png';
-import classPrivateWarm from '../assets/images/class_private_warm.png';
+import classPrivateNew from '../assets/images/class_private_new.jpg';
 
 const ClassDetail = () => {
     return (
@@ -67,7 +67,7 @@ const ClassDetail = () => {
                         <div className="lg:w-1/2">
                             <div className="rounded-2xl overflow-hidden shadow-lg h-80">
                                 <img
-                                    src={classPrivateWarm}
+                                    src={classPrivateNew}
                                     alt="Private Session"
                                     className="w-full h-full object-cover"
                                 />
