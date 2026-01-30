@@ -1,8 +1,8 @@
 import React from 'react';
 
 const ProgramSection = () => {
-    const consultationUrl = "https://map.naver.com/p/search/%ED%98%84%EC%A1%B4%EB%AA%85%EC%83%81%EC%84%BC%ED%84%B0/place/1422222547?placePath=/ticket?entry=pll&from=map&fromPanelNum=2&timestamp=202601220053&locale=ko&svcName=map_pcv5&searchText=%ED%98%84%EC%A1%B4%EB%AA%85%EC%83%81%EC%84%BC%ED%84%B0&from=nx&fromPanelNum=2&timestamp=202601220053&locale=ko&svcName=map_pcv5&searchText=%ED%98%84%EC%A1%B4%EB%AA%85%EC%83%81%EC%84%BC%ED%84%B0&fromNxList=true&searchType=place&c=15.00,0,0,0,dh";
-    const oneDayClassUrl = "https://map.naver.com/p/search/%ED%98%84%EC%A1%B4%EB%AA%85%EC%83%81%EC%84%BC%ED%84%B0/place/1422222547?placePath=/ticket?entry=pll&from=map&fromPanelNum=2&timestamp=202601220053&locale=ko&svcName=map_pcv5&searchText=%ED%98%84%EC%A1%B4%EB%AA%85%EC%83%81%EC%84%BC%ED%84%B0&from=nx&fromPanelNum=2&timestamp=202601220053&locale=ko&svcName=map_pcv5&searchText=%ED%98%84%EC%A1%B4%EB%AA%85%EC%83%81%EC%84%BC%ED%84%B0&fromNxList=true&searchType=place&c=15.00,0,0,0,dh";
+    const consultationUrl = "https://booking.naver.com/booking/6/bizes/1195282/items/6387204?area=ple&lang=ko&startDate=2026-01-28&theme=place";
+    const oneDayClassUrl = "https://booking.naver.com/booking/6/bizes/1195282/items/7314972?area=ple&lang=ko&startDate=2026-01-28&theme=place";
 
     return (
         <section id="program" className="py-16 md:py-20 bg-meditation-50">

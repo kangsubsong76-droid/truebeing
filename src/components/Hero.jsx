@@ -27,7 +27,7 @@ const Hero = () => {
                     복잡한 일상을 잠시 내려놓고, 온전한 나를 만나보세요.
                 </p>
                 <a
-                    href="https://map.naver.com/p/search/%ED%98%84%EC%A1%B4%EB%AA%85%EC%83%81%EC%84%BC%ED%84%B0/place/1422222547?placePath=/ticket?entry=pll&from=map&fromPanelNum=2&timestamp=202601220053&locale=ko&svcName=map_pcv5&searchText=%ED%98%84%EC%A1%B4%EB%AA%85%EC%83%81%EC%84%BC%ED%84%B0&from=nx&fromPanelNum=2&timestamp=202601220053&locale=ko&svcName=map_pcv5&searchText=%ED%98%84%EC%A1%B4%EB%AA%85%EC%83%81%EC%84%BC%ED%84%B0&fromNxList=true&searchType=place&c=15.00,0,0,0,dh"
+                    href="https://booking.naver.com/booking/6/bizes/1195282/items/6387204?area=ple&lang=ko&startDate=2026-01-28&theme=place"
                     target="_blank"
                     rel="noreferrer"
                     className="inline-block px-8 py-3 md:px-10 md:py-4 bg-meditation-700 text-white font-medium rounded-full shadow-lg hover:bg-meditation-800 transition-all hover:shadow-xl transform hover:-translate-y-1 text-sm md:text-base"
