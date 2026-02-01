@@ -2,8 +2,8 @@ import React from 'react';
 
 import effect1 from '../assets/images/effect_1.jpg';
 import effect2 from '../assets/images/effect_1_new.png';
-import effect3 from '../assets/images/effect_3_asian.png';
-import effect4 from '../assets/images/effect_4_asian.png';
+import effect3 from '../assets/images/effect_relations_new.jpg';
+import effect4 from '../assets/images/effect_insomnia_new.jpg';
 
 const effects = [
     {

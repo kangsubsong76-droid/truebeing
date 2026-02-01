@@ -1,7 +1,7 @@
 import React from 'react';
 import gallery1 from '../assets/images/gallery_1.png';
 import gallery5 from '../assets/images/gallery_5.png';
-import classPrivateNew from '../assets/images/class_private_new.jpg';
+
 
 const ClassDetail = () => {
     return (
@@ -63,17 +63,8 @@ const ClassDetail = () => {
             {/* Program 2: 1:1 Private */}
             <section className="bg-meditation-50 py-20 mb-24">
                 <div className="container mx-auto px-6 max-w-5xl">
-                    <div className="flex flex-col lg:flex-row-reverse gap-12 items-center">
-                        <div className="lg:w-1/2">
-                            <div className="rounded-2xl overflow-hidden shadow-lg h-80">
-                                <img
-                                    src={classPrivateNew}
-                                    alt="Private Session"
-                                    className="w-full h-full object-cover"
-                                />
-                            </div>
-                        </div>
-                        <div className="lg:w-1/2">
+                    <div className="max-w-4xl mx-auto">
+                        <div className="w-full">
                             <div className="flex items-center gap-3 mb-4">
                                 <span className="px-3 py-1 bg-meditation-600 text-white text-xs font-bold rounded-full">Premium</span>
                                 <span className="px-3 py-1 bg-white border border-gray-200 text-gray-600 text-xs font-bold rounded-full">대표 유경선생님 직강</span>
