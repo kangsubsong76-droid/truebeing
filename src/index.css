@@ -25,6 +25,7 @@
 
 @layer base {
   body {
+    font-family: 'Lato', 'GmarketSansMedium', sans-serif;
     @apply antialiased text-gray-800 bg-white break-keep;
   }
 
@@ -33,7 +34,11 @@
   h3,
   h4,
   h5,
-  h6,
+  h6 {
+    font-family: 'Playfair Display', 'GmarketSansBold', serif;
+    @apply break-keep;
+  }
+
   p,
   li,
   blockquote {

@@ -255,6 +255,34 @@ export const en = {
             notice: "📢 When parking, please leave 'Truebeing + Contact Info' on the windshield."
         }
     },
+    effects: {
+        title: "Benefits of Meditation",
+        items: [
+            {
+                title: "Mental Stability & Healing",
+                desc: "Soothe your stressed mind and regain deep inner peace."
+            },
+            {
+                title: "Physical Vitality",
+                desc: "Balance the body and infuse vitality through proper posture and breathing."
+            },
+            {
+                title: "Better Relationships",
+                desc: "Recover relationships by understanding yourself and embracing others."
+            },
+            {
+                title: "Insomnia Relief",
+                desc: "Empty unnecessary thoughts and lead yourself to a relaxed state for deep sleep."
+            }
+        ]
+    },
+    gallery: {
+        title: "Class Scenery"
+    },
+    video: {
+        title: "Center Official Video",
+        desc: "Meeting your true self in silence. Preview the center's scenery and atmosphere through video."
+    },
     footer: {
         title: "Truebeing Meditation Center",
         desc: "The life change you truly desire begins in the moment you step out of the mind. A sanctuary in the city to restore your true self.",

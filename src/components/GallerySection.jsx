@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
+import { useLanguage } from '../contexts/LanguageContext';
+import { translations } from '../data/translations';
 
 import gallery1 from '../assets/images/gallery_1.png';
 import gallery2 from '../assets/images/gallery_2.png';
@@ -23,6 +25,9 @@ const classImages = [
 ];
 
 const GallerySection = () => {
+    const { language } = useLanguage();
+    const t = translations[language].gallery;
+
     const [currentIndex, setCurrentIndex] = useState(0);
     const [itemsToShow, setItemsToShow] = useState(3);
 
@@ -62,7 +67,7 @@ const GallerySection = () => {
         <section id="archive" className="py-20 bg-white overflow-hidden">
             <div className="container mx-auto px-6">
                 <h2 className="text-3xl md:text-4xl font-bold text-center text-meditation-900 mb-16">
-                    다양한 수업 전경
+                    {t.title}
                 </h2>
 
                 <div className="relative max-w-6xl mx-auto">
