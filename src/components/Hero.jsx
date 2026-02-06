@@ -1,7 +1,12 @@
 import React from 'react';
 import logoHero from '../assets/logo_hero_final.jpg';
+import { useLanguage } from '../contexts/LanguageContext';
+import { translations } from '../data/translations';
 
 const Hero = () => {
+    const { language } = useLanguage();
+    const t = translations[language].hero;
+
     return (
         <section id="home" className="relative h-screen flex items-center justify-center bg-white overflow-hidden">
             <div className="absolute inset-0 z-0">
@@ -20,11 +25,10 @@ const Hero = () => {
                     />
                 </div>
                 <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-meditation-900 mb-6 md:mb-8 leading-tight break-keep">
-                    당신이 찾던 올바른 명상
+                    {t.title}
                 </h1>
-                <p className="text-lg md:text-xl lg:text-2xl text-gray-700 mb-10 md:mb-12 font-light leading-relaxed">
-                    성북동의 고요하고 아늑한 명상공간에서 마주하는 진정한 안식.<br className="hidden md:block" />
-                    복잡한 일상을 잠시 내려놓고, 온전한 나를 만나보세요.
+                <p className="text-lg md:text-xl lg:text-2xl text-gray-700 mb-10 md:mb-12 font-light leading-relaxed whitespace-pre-wrap">
+                    {t.subtitle}
                 </p>
                 <a
                     href="https://booking.naver.com/booking/6/bizes/1195282/items/6387204?area=ple&lang=ko&startDate=2026-01-28&theme=place"
@@ -32,7 +36,7 @@ const Hero = () => {
                     rel="noreferrer"
                     className="inline-block px-8 py-3 md:px-10 md:py-4 bg-meditation-700 text-white font-medium rounded-full shadow-lg hover:bg-meditation-800 transition-all hover:shadow-xl transform hover:-translate-y-1 text-sm md:text-base"
                 >
-                    방문상담 예약하기
+                    {t.cta}
                 </a>
             </div>
         </section>

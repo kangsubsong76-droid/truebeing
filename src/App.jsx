@@ -14,6 +14,8 @@ import CenterIntro from './components/CenterIntro';
 import MeditationArchive from './components/MeditationArchive';
 import ContactPage from './components/ContactPage';
 
+import { LanguageProvider } from './contexts/LanguageContext';
+
 function ScrollToTop() {
     const { pathname } = useLocation();
 
@@ -26,30 +28,32 @@ function ScrollToTop() {
 
 function App() {
     return (
-        <div className="font-sans antialiased text-gray-900 bg-white">
-            <ScrollToTop />
-            <Navbar />
-            <main>
-                <Routes>
-                    <Route path="/" element={
-                        <>
-                            <Hero />
-                            <Introduction />
-                            <EffectsSection />
-                            <ProgramSection />
-                            <VideoSection />
-                            <GallerySection />
-                        </>
-                    } />
-                    <Route path="/about" element={<AboutMeditation />} />
-                    <Route path="/classes" element={<ClassDetail />} />
-                    <Route path="/intro" element={<CenterIntro />} />
-                    <Route path="/archive" element={<MeditationArchive />} />
-                    <Route path="/contact" element={<ContactPage />} />
-                </Routes>
-            </main>
-            <Footer />
-        </div>
+        <LanguageProvider>
+            <div className="font-sans antialiased text-gray-900 bg-white">
+                <ScrollToTop />
+                <Navbar />
+                <main>
+                    <Routes>
+                        <Route path="/" element={
+                            <>
+                                <Hero />
+                                <Introduction />
+                                <EffectsSection />
+                                <ProgramSection />
+                                <VideoSection />
+                                <GallerySection />
+                            </>
+                        } />
+                        <Route path="/about" element={<AboutMeditation />} />
+                        <Route path="/classes" element={<ClassDetail />} />
+                        <Route path="/intro" element={<CenterIntro />} />
+                        <Route path="/archive" element={<MeditationArchive />} />
+                        <Route path="/contact" element={<ContactPage />} />
+                    </Routes>
+                </main>
+                <Footer />
+            </div>
+        </LanguageProvider>
     );
 }
 

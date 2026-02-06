@@ -1,25 +1,28 @@
 import React from 'react';
 import { Instagram, Youtube, Coffee, FileText, MapPin, Phone, Mail } from 'lucide-react';
+import { useLanguage } from '../contexts/LanguageContext';
+import { translations } from '../data/translations';
 
 const Footer = () => {
+    const { language } = useLanguage();
+    const t = translations[language].footer;
+
     return (
         <footer id="contact" className="bg-meditation-950 text-meditation-200 py-12 md:py-16">
             <div className="container mx-auto px-6">
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 mb-8 md:mb-12">
                     <div>
-                        <h3 className="text-xl md:text-2xl font-bold text-white mb-4 md:mb-6">현존명상센터</h3>
-                        <p className="leading-relaxed opacity-80 text-sm md:text-base">
-                            당신이 진정으로 원하는 삶의 변화,<br />
-                            마음에서 벗어난 찰나에서 시작됩니다.<br />
-                            참된 나를 회복하는 도심 속 쉼의 공간.
+                        <h3 className="text-xl md:text-2xl font-bold text-white mb-4 md:mb-6">{t.title}</h3>
+                        <p className="leading-relaxed opacity-80 text-sm md:text-base whitespace-pre-wrap">
+                            {t.desc}
                         </p>
                     </div>
                     <div className="md:col-span-1">
-                        <h4 className="text-lg font-bold text-white mb-4 md:mb-6">Contact Us</h4>
+                        <h4 className="text-lg font-bold text-white mb-4 md:mb-6">{t.contactTitle}</h4>
                         <ul className="space-y-3 md:space-y-4 opacity-80 text-sm">
                             <li className="flex items-start gap-3">
                                 <MapPin className="w-5 h-5 mt-0.5 shrink-0" />
-                                <span>서울시 성북구 성북로 15길 15-2 (2F)<br />(최순우 옛집 골목 안)</span>
+                                <span className="mt-0.5 whitespace-pre-wrap">{t.address}</span>
                             </li>
                             <li className="flex items-center gap-3">
                                 <Phone className="w-5 h-5 shrink-0" />
@@ -32,7 +35,7 @@ const Footer = () => {
                         </ul>
                     </div>
                     <div className="md:col-span-1">
-                        <h4 className="text-lg font-bold text-white mb-4 md:mb-6">Follow Us</h4>
+                        <h4 className="text-lg font-bold text-white mb-4 md:mb-6">{t.followTitle}</h4>
                         {/* Mobile: Grid 2 cols, Desktop: Flex col */}
                         <div className="grid grid-cols-2 gap-3 md:flex md:flex-col md:space-y-4">
                             <a
@@ -89,8 +92,8 @@ const Footer = () => {
 
                 <div className="border-t border-meditation-800 pt-8 text-center text-xs md:text-sm opacity-60">
                     <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-                        <p>&copy; 2024 현존명상센터 (Truebeing Meditation Center). All rights reserved.</p>
-                        <p>사업자등록번호 : 391-88-03105 | 현존명상협동조합 (이사장: 우수완)</p>
+                        <p>{t.copyright}</p>
+                        <p>{t.businessInfo}</p>
                     </div>
                 </div>
             </div>
