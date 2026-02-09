@@ -252,23 +252,25 @@ const CorporateEducation = () => {
             <section className="container mx-auto px-6 mb-20">
                 <div className="bg-meditation-900 text-white rounded-3xl p-10 md:p-16 text-center max-w-4xl mx-auto shadow-2xl">
                     <h2 className="text-3xl font-bold mb-8">{t.contact?.title}</h2>
-                    <div className="flex flex-col md:flex-row justify-center gap-8 md:gap-16 items-center">
-                        <div className="flex items-center gap-4 bg-white/10 px-8 py-4 rounded-full hover:bg-white/20 transition-colors">
-                            <Phone className="w-6 h-6 text-meditation-200" />
-                            <div className="flex flex-col items-start">
+                    <div className="flex flex-col md:flex-row justify-center gap-6 md:gap-16 items-center">
+                        <div className="w-full md:w-auto flex items-center gap-4 bg-white/10 px-6 py-4 md:px-8 rounded-2xl md:rounded-full hover:bg-white/20 transition-colors">
+                            <Phone className="w-6 h-6 text-meditation-200 flex-shrink-0" />
+                            <div className="flex flex-col items-start min-w-0">
                                 <span className="text-xs text-meditation-200 uppercase tracking-widest font-semibold mb-1">
                                     {language === 'ko' ? '전화 상담' : 'Inquiry'}
                                 </span>
-                                <span className="text-xl font-bold tracking-wide">{t.contact?.tel}</span>
+                                <span className="text-lg md:text-xl font-bold tracking-wide">{t.contact?.tel}</span>
                             </div>
                         </div>
-                        <div className="flex items-center gap-4 bg-white/10 px-8 py-4 rounded-full hover:bg-white/20 transition-colors">
-                            <Mail className="w-6 h-6 text-meditation-200" />
-                            <div className="flex flex-col items-start">
+                        <div className="w-full md:w-auto flex items-center gap-4 bg-white/10 px-6 py-4 md:px-8 rounded-2xl md:rounded-full hover:bg-white/20 transition-colors">
+                            <Mail className="w-6 h-6 text-meditation-200 flex-shrink-0" />
+                            <div className="flex flex-col items-start min-w-0">
                                 <span className="text-xs text-meditation-200 uppercase tracking-widest font-semibold mb-1">
                                     Email
                                 </span>
-                                <span className="text-base md:text-xl font-medium tracking-wide">{t.contact?.email}</span>
+                                <span className="text-[13px] sm:text-base md:text-xl font-medium tracking-wide break-all">
+                                    {t.contact?.email}
+                                </span>
                             </div>
                         </div>
                     </div>
