@@ -70,11 +70,13 @@ const CorporateEducation = () => {
                         <h3 className="text-xl md:text-2xl font-bold text-meditation-800 mb-6 uppercase tracking-wide">
                             명상의 필요성
                         </h3>
-                        <div className="w-full max-w-4xl bg-white rounded-2xl shadow-lg overflow-hidden p-2">
+                        {/* Mobile Swipe Hint */}
+                        <p className="text-sm text-meditation-500 mb-2 md:hidden">← 좌우로 밀어서 보세요 →</p>
+                        <div className="w-full max-w-4xl bg-white rounded-2xl shadow-lg overflow-x-auto overflow-y-hidden p-2 scrollbar-thin scrollbar-thumb-meditation-200">
                             <img
                                 src={necessityStats}
                                 alt="명상의 필요성"
-                                className="w-full h-auto"
+                                className="min-w-[600px] md:min-w-0 w-full h-auto"
                             />
                         </div>
                     </div>
@@ -84,11 +86,13 @@ const CorporateEducation = () => {
                         <h3 className="text-xl md:text-2xl font-bold text-meditation-800 mb-6 uppercase tracking-wide">
                             기대효과
                         </h3>
-                        <div className="w-full max-w-4xl bg-white rounded-2xl shadow-lg overflow-hidden p-2">
+                        {/* Mobile Swipe Hint */}
+                        <p className="text-sm text-meditation-500 mb-2 md:hidden">← 좌우로 밀어서 보세요 →</p>
+                        <div className="w-full max-w-4xl bg-white rounded-2xl shadow-lg overflow-x-auto overflow-y-hidden p-2 scrollbar-thin scrollbar-thumb-meditation-200">
                             <img
                                 src={necessityDiagram}
                                 alt="기대효과"
-                                className="w-full h-auto"
+                                className="min-w-[600px] md:min-w-0 w-full h-auto"
                             />
                         </div>
                     </div>
@@ -101,12 +105,14 @@ const CorporateEducation = () => {
                     <h2 className="text-2xl md:text-3xl font-bold text-meditation-900 mb-4">
                         {t.roadmap?.title}
                     </h2>
-                    <p className="text-gray-600 mb-10">{t.roadmap?.desc}</p>
-                    <div className="bg-white rounded-2xl shadow-lg p-4 md:p-8">
+                    <p className="text-gray-600 mb-6">{t.roadmap?.desc}</p>
+                    {/* Mobile Swipe Hint */}
+                    <p className="text-sm text-meditation-500 mb-4 md:hidden">← 좌우로 밀어서 보세요 →</p>
+                    <div className="bg-white rounded-2xl shadow-lg p-2 md:p-8 overflow-x-auto overflow-y-hidden scrollbar-thin scrollbar-thumb-meditation-200">
                         <img
                             src={roadmapImg}
                             alt="Meditation Roadmap"
-                            className="w-full h-auto object-contain max-h-[800px] mx-auto"
+                            className="min-w-[700px] md:min-w-0 w-full h-auto object-contain max-h-[800px] mx-auto"
                         />
                     </div>
                 </div>
