@@ -99,24 +99,7 @@ const CorporateEducation = () => {
                 </div>
             </section>
 
-            {/* 3. Meditation Roadmap Section */}
-            <section className="bg-gray-50 py-20 mb-20">
-                <div className="container mx-auto px-6 max-w-6xl text-center">
-                    <h2 className="text-2xl md:text-3xl font-bold text-meditation-900 mb-4">
-                        {t.roadmap?.title}
-                    </h2>
-                    <p className="text-gray-600 mb-6">{t.roadmap?.desc}</p>
-                    {/* Mobile Swipe Hint */}
-                    <p className="text-sm text-meditation-500 mb-4 md:hidden">← 좌우로 밀어서 보세요 →</p>
-                    <div className="bg-white rounded-2xl shadow-lg p-2 md:p-8 overflow-x-auto overflow-y-hidden scrollbar-thin scrollbar-thumb-meditation-200">
-                        <img
-                            src={roadmapImg}
-                            alt="Meditation Roadmap"
-                            className="min-w-[700px] md:min-w-0 w-full h-auto object-contain max-h-[800px] mx-auto"
-                        />
-                    </div>
-                </div>
-            </section>
+
 
             {/* 4. Cases Section */}
             <section className="bg-meditation-950/5 py-20 mb-20">
