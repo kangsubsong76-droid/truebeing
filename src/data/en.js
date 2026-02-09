@@ -22,19 +22,19 @@ export const en = {
             desc: "The nature of the mind is desire, selfishness, dissatisfaction, and fear itself.\nNothing can be handled correctly and efficiently within fear and selfishness.\n\nThe core of meditation is the 'moment' free from the mind.\n\nThe change in individual members who have broken away from self-centered thinking through meditation\nleads to work efficiency as well as smooth communication structures within the organization, resulting in overall organizational performance."
         },
         cases: {
-            title: "Corporate Meditation Education with Truebeing",
+            title: "Key Corporate Education Cases",
             list: [
                 {
                     title: "Anyang Gwacheon Office of Education x Truebeing Meditation Center (Dec 2025)",
                     imgs: ["anyang_1", "anyang_2", "anyang_3"]
                 },
                 {
-                    title: "Kookmin Univ. Co-op x Truebeing Meditation Center (Dec 2024)",
-                    imgs: ["kookmin_1", "kookmin_2", "kookmin_3", "kookmin_4"]
+                    title: "Hyecho Travel x Truebeing Meditation Center (Feb 2025)",
+                    imgs: ["hyecho_1", "hyecho_2"]
                 },
                 {
-                    title: "Hyecho Travel x Truebeing Meditation Center",
-                    imgs: ["hyecho_1", "hyecho_2"]
+                    title: "Kookmin Univ. Co-op x Truebeing Meditation Center (Dec 2024)",
+                    imgs: ["kookmin_1", "kookmin_2", "kookmin_3", "kookmin_4"]
                 }
             ]
         },
