@@ -14,7 +14,7 @@ const CenterIntro = () => {
     const t = translations[language].centerIntro;
 
     return (
-        <div className="pt-16 md:pt-24 pb-12 md:pb-20 bg-white">
+        <div className="pt-32 md:pt-40 pb-12 md:pb-20 bg-white">
             {/* Header */}
             <section className="container mx-auto px-6 mb-12 md:mb-20 text-center">
                 <span className="block text-meditation-600 font-semibold tracking-widest text-sm mb-4">

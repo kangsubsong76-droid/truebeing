@@ -5,13 +5,80 @@ export const en = {
         classes: "Classes",
         intro: "About Center",
         archive: "Archive",
+        corporate: "Corporate",
         contact: "Contact",
         toggle: "KR"
+    },
+    corporate: {
+        label: "CORPORATE",
+        title: "Corporate Meditation Education Guide",
+        subtitle: "Truebeing Meditation Center is a specialized institution teaching correct meditation scientifically and systematically to help mind vanish.\nThrough 'Samatha Meditation', which sees one object as it is, we present a roadmap to presence beyond the dimension of mind (time).",
+        roadmap: {
+            title: "Roadmap to Presence via Samatha",
+            desc: "Step-by-step programs and goals of each class"
+        },
+        necessity: {
+            title: "Why Corporate Meditation?",
+            desc: "The nature of the mind is desire, selfishness, dissatisfaction, and fear itself.\nNothing can be handled correctly and efficiently within fear and selfishness.\n\nThe core of meditation is the 'moment' free from the mind.\n\nThe change in individual members who have broken away from self-centered thinking through meditation\nleads to work efficiency as well as smooth communication structures within the organization, resulting in overall organizational performance."
+        },
+        cases: {
+            title: "Corporate Meditation Education with Truebeing",
+            list: [
+                {
+                    title: "Anyang Gwacheon Office of Education x Truebeing Meditation Center (Dec 2025)",
+                    imgs: ["anyang_1", "anyang_2", "anyang_3"]
+                },
+                {
+                    title: "Kookmin Univ. Co-op x Truebeing Meditation Center (Dec 2024)",
+                    imgs: ["kookmin_1", "kookmin_2", "kookmin_3", "kookmin_4"]
+                },
+                {
+                    title: "Hyecho Travel x Truebeing Meditation Center",
+                    imgs: ["hyecho_1", "hyecho_2"]
+                }
+            ]
+        },
+        press: {
+            title: "Media Coverage",
+            list: [
+                {
+                    title: "「Kookmin Univ. Co-op & Truebeing Meditation Co-op, Successful 'Meditation Special Lecture'... Case of Collaboration through Social Enterprise Solidarity in Seongbuk-gu」, Eroun.net, 2024.12.20",
+                    url: "https://www.eroun.net/news/articleView.html?idxno=50917"
+                },
+                {
+                    title: "「Kookmin Univ. Co-op-Truebeing Meditation Co-op, 'Meditation Special Lecture' for Mind Care」, LifeIn, 2024.12.20",
+                    url: "https://www.lifein.news/news/articleView.html?idxno=18326"
+                }
+            ]
+        },
+        process: {
+            title: "Corporate Education Process",
+            steps: [
+                {
+                    num: "1. Pre-consultation",
+                    desc: "Please call us at the number below for pre-consultation, proposal delivery, and meeting scheduling."
+                },
+                {
+                    num: "2. Program Design",
+                    desc: "Based on the Truebeing Roadmap developed by the center, meditation program design suitable for the company is carried out."
+                },
+                {
+                    num: "3. Class Execution",
+                    desc: "Through delicate class execution suitable for students' individual conditions on-site, we increase employee satisfaction and promote continuous interest in meditation."
+                }
+            ]
+        },
+        contact: {
+            title: "Contact",
+            tel: "010-3188-3105",
+            email: "truebeing-meditation@naver.com"
+        }
     },
     hero: {
         title: "The True Meditation You've Been Seeking",
         subtitle: "Find true respite in the serene and cozy space of Seongbuk-dong. Set aside daily complexities and meet your authentic self whole.",
-        cta: "Book a Consultation"
+        cta: "Book a Consultation",
+        corporateBtn: "Corporate Inquiry"
     },
     introduction: {
         label: "TRUEBEING",

@@ -13,6 +13,7 @@ import ClassDetail from './components/ClassDetail';
 import CenterIntro from './components/CenterIntro';
 import MeditationArchive from './components/MeditationArchive';
 import ContactPage from './components/ContactPage';
+import CorporateEducation from './components/CorporateEducation';
 
 import { LanguageProvider } from './contexts/LanguageContext';
 
@@ -48,6 +49,7 @@ function App() {
                         <Route path="/classes" element={<ClassDetail />} />
                         <Route path="/intro" element={<CenterIntro />} />
                         <Route path="/archive" element={<MeditationArchive />} />
+                        <Route path="/corporate-education" element={<CorporateEducation />} />
                         <Route path="/contact" element={<ContactPage />} />
                     </Routes>
                 </main>

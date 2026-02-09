@@ -35,6 +35,7 @@ const Navbar = () => {
         { name: t.about, path: '/about' },
         { name: t.classes, path: '/classes' },
         { name: t.intro, path: '/intro' },
+        { name: t.corporate, path: '/corporate-education' },
         { name: t.archive, path: '/archive' },
         { name: t.contact, path: '/contact' },
     ];
@@ -72,8 +73,8 @@ const Navbar = () => {
                     <button
                         onClick={toggleLanguage}
                         className={`flex items-center gap-1.5 px-3 py-1.5 rounded-full border transition-all text-xs font-semibold tracking-wider ${isScrolled
-                                ? 'border-gray-200 text-gray-600 hover:border-gray-400 hover:text-gray-800'
-                                : 'border-gray-400 text-gray-800 hover:border-gray-600 hover:text-gray-900'
+                            ? 'border-gray-200 text-gray-600 hover:border-gray-400 hover:text-gray-800'
+                            : 'border-gray-400 text-gray-800 hover:border-gray-600 hover:text-gray-900'
                             }`}
                         aria-label="Toggle Language"
                     >
