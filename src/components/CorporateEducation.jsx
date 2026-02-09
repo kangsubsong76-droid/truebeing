@@ -9,6 +9,11 @@ import asanaRoadmapImg from '../assets/기업/아사나코스.jpg';
 import necessityStats from '../assets/기업/명상의 필요성.png';
 import necessityDiagram from '../assets/기업/기대효과.png';
 
+// Program Example Images
+import program1 from '../assets/기업/프로그램1.png';
+import program2 from '../assets/기업/프로그램2.png';
+import program3 from '../assets/기업/프로그램3.png';
+
 // Case Study Images (from src/assets/기업/)
 import anyang1 from '../assets/기업/안양과천1.png';
 import anyang2 from '../assets/기업/안양과천2.jpg';
@@ -97,10 +102,42 @@ const CorporateEducation = () => {
                         </div>
                     </div>
                 </div>
+            </section>            {/* 3. Program Examples Section */}
+            <section className="bg-gray-50 py-20 mb-20">
+                <div className="container mx-auto px-6 max-w-6xl text-center">
+                    <h2 className="text-2xl md:text-3xl font-bold text-meditation-900 mb-8">
+                        기업명상 프로그램 예시
+                    </h2>
+                    <p className="text-gray-600 mb-6">현존명상센터의 다양한 기업 맞춤형 프로그램들입니다.</p>
+
+                    {/* Mobile Swipe Hint */}
+                    <p className="text-sm text-meditation-500 mb-4 md:hidden">← 좌우로 밀어서 보세요 →</p>
+
+                    <div className="flex flex-col gap-10 md:gap-16 overflow-x-auto md:overflow-x-visible pb-4 md:pb-0 scrollbar-thin scrollbar-thumb-meditation-200">
+                        <div className="min-w-[600px] md:min-w-0 bg-white rounded-2xl shadow-lg p-2 md:p-6 mx-auto w-full max-w-4xl">
+                            <img
+                                src={program1}
+                                alt="프로그램 예시 1"
+                                className="w-full h-auto"
+                            />
+                        </div>
+                        <div className="min-w-[600px] md:min-w-0 bg-white rounded-2xl shadow-lg p-2 md:p-6 mx-auto w-full max-w-4xl">
+                            <img
+                                src={program2}
+                                alt="프로그램 예시 2"
+                                className="w-full h-auto"
+                            />
+                        </div>
+                        <div className="min-w-[600px] md:min-w-0 bg-white rounded-2xl shadow-lg p-2 md:p-6 mx-auto w-full max-w-4xl">
+                            <img
+                                src={program3}
+                                alt="프로그램 예시 3"
+                                className="w-full h-auto"
+                            />
+                        </div>
+                    </div>
+                </div>
             </section>
-
-
-
             {/* 4. Cases Section */}
             <section className="bg-meditation-950/5 py-20 mb-20">
                 <div className="container mx-auto px-6 max-w-6xl">
