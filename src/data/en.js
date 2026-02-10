@@ -273,8 +273,8 @@ export const en = {
                     "Establishment of Truebeing Meditation Cooperative Corporation"
                 ],
                 images: [
-                    "https://cdn.imweb.me/upload/S202405073a922559bbca7/eddddff797469.jpg",
-                    "https://cdn.imweb.me/upload/S202405073a922559bbca7/16af658b35e4a.jpg"
+                    "/assets/images/history/history_1.jpg",
+                    "/assets/images/history/history_2.jpg"
                 ]
             },
             {
@@ -289,24 +289,24 @@ export const en = {
                 year: "2025. 1",
                 contents: ["Meditation classes for Kookmin University Coop members and staff"],
                 images: [
-                    "https://cdn.imweb.me/upload/S202405073a922559bbca7/a84cdd0166d7e.jpg",
-                    "https://cdn.imweb.me/upload/S202405073a922559bbca7/0b32f8d03fb7f.jpg"
+                    "/assets/images/history/history_3.jpg",
+                    "/assets/images/history/history_4.jpg"
                 ]
             },
             {
                 year: "2025. 4",
                 contents: ["Meditation class for all employees (90 people) of Hyecho Travel Agency"],
                 images: [
-                    "https://cdn.imweb.me/upload/S202405073a922559bbca7/d9a87a5e92208.jpg",
-                    "https://cdn.imweb.me/upload/S202405073a922559bbca7/960ff79618923.png"
+                    "/assets/images/history/history_5.jpg",
+                    "/assets/images/history/history_6.png"
                 ]
             },
             {
                 year: "2025. 6",
                 contents: ["Planning and operation of Seongbuk-dong Cultural Tour Meditation Program"],
                 images: [
-                    "https://cdn.imweb.me/upload/S202405073a922559bbca7/bc4d5bf9f2b46.jpg",
-                    "https://cdn.imweb.me/upload/S202405073a922559bbca7/ad0ae457bde12.png"
+                    "/assets/images/history/history_7.jpg",
+                    "/assets/images/history/history_8.png"
                 ]
             },
             {
@@ -317,16 +317,16 @@ export const en = {
                 year: "2025. 11",
                 contents: ["Meditation class for teachers at Saeroilhagi Center organized by Jeongneung Social Welfare Center"],
                 images: [
-                    "https://cdn.imweb.me/upload/S202405073a922559bbca7/d3511471c6872.jpg",
-                    "https://cdn.imweb.me/upload/S202405073a922559bbca7/2cb8604a54e4f.jpg"
+                    "/assets/images/history/history_9.jpg",
+                    "/assets/images/history/history_10.jpg"
                 ]
             },
             {
                 year: "2025. 12",
                 contents: ["Meditation class for Anyang Gwacheon Office of Education"],
                 images: [
-                    "https://cdn.imweb.me/upload/S202405073a922559bbca7/4e2ad83bf428c.jpg",
-                    "https://cdn.imweb.me/upload/S202405073a922559bbca7/e37d0c7888beb.jpg"
+                    "/assets/images/history/history_11.jpg",
+                    "/assets/images/history/history_12.jpg"
                 ]
             }
         ],

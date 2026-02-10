@@ -273,8 +273,8 @@ export const ko = {
                     "현존명상협동조합 법인설립"
                 ],
                 images: [
-                    "https://cdn.imweb.me/upload/S202405073a922559bbca7/eddddff797469.jpg",
-                    "https://cdn.imweb.me/upload/S202405073a922559bbca7/16af658b35e4a.jpg"
+                    "/assets/images/history/history_1.jpg",
+                    "/assets/images/history/history_2.jpg"
                 ]
             },
             {
@@ -289,24 +289,24 @@ export const ko = {
                 year: "2025. 1",
                 contents: ["국민대생활협동조합 조합원 및 교직원 대상 명상 수업 진행"],
                 images: [
-                    "https://cdn.imweb.me/upload/S202405073a922559bbca7/a84cdd0166d7e.jpg",
-                    "https://cdn.imweb.me/upload/S202405073a922559bbca7/0b32f8d03fb7f.jpg"
+                    "/assets/images/history/history_3.jpg",
+                    "/assets/images/history/history_4.jpg"
                 ]
             },
             {
                 year: "2025. 4",
                 contents: ["문화탐방 전문여행사 혜초여행사 전직원 대상(90명) 명상 수업 진행"],
                 images: [
-                    "https://cdn.imweb.me/upload/S202405073a922559bbca7/d9a87a5e92208.jpg",
-                    "https://cdn.imweb.me/upload/S202405073a922559bbca7/960ff79618923.png"
+                    "/assets/images/history/history_5.jpg",
+                    "/assets/images/history/history_6.png"
                 ]
             },
             {
                 year: "2025. 6",
                 contents: ["성북동 문화탐방 명상프로그램 기획 및 운영"],
                 images: [
-                    "https://cdn.imweb.me/upload/S202405073a922559bbca7/bc4d5bf9f2b46.jpg",
-                    "https://cdn.imweb.me/upload/S202405073a922559bbca7/ad0ae457bde12.png"
+                    "/assets/images/history/history_7.jpg",
+                    "/assets/images/history/history_8.png"
                 ]
             },
             {
@@ -317,16 +317,16 @@ export const ko = {
                 year: "2025. 11",
                 contents: ["정릉종합사회복지관 주관 새로일하기센터 선생님 대상 명상 수업 진행"],
                 images: [
-                    "https://cdn.imweb.me/upload/S202405073a922559bbca7/d3511471c6872.jpg",
-                    "https://cdn.imweb.me/upload/S202405073a922559bbca7/2cb8604a54e4f.jpg"
+                    "/assets/images/history/history_9.jpg",
+                    "/assets/images/history/history_10.jpg"
                 ]
             },
             {
                 year: "2025. 12",
                 contents: ["안양과천교육지원청 평생교육건강과 명상수업 진행"],
                 images: [
-                    "https://cdn.imweb.me/upload/S202405073a922559bbca7/4e2ad83bf428c.jpg",
-                    "https://cdn.imweb.me/upload/S202405073a922559bbca7/e37d0c7888beb.jpg"
+                    "/assets/images/history/history_11.jpg",
+                    "/assets/images/history/history_12.jpg"
                 ]
             }
         ],
