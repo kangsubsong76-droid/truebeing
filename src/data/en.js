@@ -241,13 +241,95 @@ export const en = {
         title: "About Us",
         philosophy: {
             title: "\"Scientific Meditation\npenetrating the essence of mind\"",
-            desc: "Truebeing Meditation Center guides you not with vague comfort, but with a precise understanding of the mind's mechanism to find freedom from the root.",
-            items: [
-                { icon: "🌱", title: "Est. 2009", desc: "A time-tested authentic meditation institute" },
-                { icon: "🧘", title: "Authentic Samatha", desc: "Insight into mind's reality, aiming for True Self & Pure Consciousness" },
-                { icon: "🌲", title: "Relocated to Seongbuk-dong", desc: "Aug 2024, A cozy meditation space in a city alley" }
-            ]
+            desc: "Truebeing Meditation Center guides you not with vague comfort, but with a precise understanding of the mind's mechanism to find freedom from the root."
         },
+        history: [
+            {
+                year: "2009 ~",
+                contents: [
+                    "Opened 'Awareness Yoga' Naver Cafe to promote yoga as meditation",
+                    "Authored books for popularization of meditation"
+                ]
+            },
+            {
+                year: "2013 ~",
+                contents: ["Small group yoga meditation classes in Yeonnam-dong"]
+            },
+            {
+                year: "2016 ~",
+                contents: [
+                    "Started breathing Samatha meditation classes",
+                    "Opened Samseongyo Meditation Center"
+                ]
+            },
+            {
+                year: "2018 ~",
+                contents: ["Cultivating meditation instructors through apprenticeship"]
+            },
+            {
+                year: "2024. 8",
+                contents: [
+                    "Relocated and expanded to Seongbuk-dong Meditation Center",
+                    "Establishment of Truebeing Meditation Cooperative Corporation"
+                ],
+                images: [
+                    "https://cdn.imweb.me/upload/S202405073a922559bbca7/eddddff797469.jpg",
+                    "https://cdn.imweb.me/upload/S202405073a922559bbca7/16af658b35e4a.jpg"
+                ]
+            },
+            {
+                year: "2024. 10",
+                contents: ["Meditation special lecture for social enterprises in Seongbuk-gu"]
+            },
+            {
+                year: "2024. 11",
+                contents: ["Selected for Social Enterprise Project Support by Seoul City & KSPO"]
+            },
+            {
+                year: "2025. 1",
+                contents: ["Meditation classes for Kookmin University Coop members and staff"],
+                images: [
+                    "https://cdn.imweb.me/upload/S202405073a922559bbca7/a84cdd0166d7e.jpg",
+                    "https://cdn.imweb.me/upload/S202405073a922559bbca7/0b32f8d03fb7f.jpg"
+                ]
+            },
+            {
+                year: "2025. 4",
+                contents: ["Meditation class for all employees (90 people) of Hyecho Travel Agency"],
+                images: [
+                    "https://cdn.imweb.me/upload/S202405073a922559bbca7/d9a87a5e92208.jpg",
+                    "https://cdn.imweb.me/upload/S202405073a922559bbca7/960ff79618923.png"
+                ]
+            },
+            {
+                year: "2025. 6",
+                contents: ["Planning and operation of Seongbuk-dong Cultural Tour Meditation Program"],
+                images: [
+                    "https://cdn.imweb.me/upload/S202405073a922559bbca7/bc4d5bf9f2b46.jpg",
+                    "https://cdn.imweb.me/upload/S202405073a922559bbca7/ad0ae457bde12.png"
+                ]
+            },
+            {
+                year: "2025. 7",
+                contents: ["Selected for Small Business Content Production Support by MSS"]
+            },
+            {
+                year: "2025. 11",
+                contents: ["Meditation class for teachers at Saeroilhagi Center organized by Jeongneung Social Welfare Center"],
+                images: [
+                    "https://cdn.imweb.me/upload/S202405073a922559bbca7/d3511471c6872.jpg",
+                    "https://cdn.imweb.me/upload/S202405073a922559bbca7/2cb8604a54e4f.jpg"
+                ]
+            },
+            {
+                year: "2025. 12",
+                contents: ["Meditation class for Anyang Gwacheon Office of Education"],
+                images: [
+                    "https://cdn.imweb.me/upload/S202405073a922559bbca7/4e2ad83bf428c.jpg",
+                    "https://cdn.imweb.me/upload/S202405073a922559bbca7/e37d0c7888beb.jpg"
+                ]
+            }
+        ],
         founder: {
             badge: "FOUNDER",
             name: "Yoo-kyung",

@@ -2,7 +2,7 @@ import React from 'react';
 
 import effect1 from '../assets/images/effect_1.jpg';
 import effect2 from '../assets/images/effect_1_new.png';
-import effect3 from '../assets/images/effect_relations_new.jpg';
+import effect3 from '../assets/images/effect_relations_v2.png';
 import effect4 from '../assets/images/effect_insomnia_new.jpg';
 import { useLanguage } from '../contexts/LanguageContext';
 import { translations } from '../data/translations';

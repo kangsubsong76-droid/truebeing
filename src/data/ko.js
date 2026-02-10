@@ -240,14 +240,96 @@ export const ko = {
         label: "ABOUT US",
         title: "명상센터 소개",
         philosophy: {
-            title: "\"마음의 본질을 꿰뚫는 과학적인 명상\"",
-            desc: "현존명상센터는 막연한 위로가 아닌, 마음의 메커니즘을 정확히 이해하고 근본으로부터 자유로워지는 길을 안내합니다.",
-            items: [
-                { icon: "🌱", title: "2009년 설립", desc: "오랜 시간 검증된 정통 명상 교육 기관" },
-                { icon: "🧘", title: "정통 사마타", desc: "마음의 실체를 통찰하며, 진아, 순수의식을 지향" },
-                { icon: "🌲", title: "성북동 확장이전", desc: "2024년 8월, 도심속 골목안 아늑한 명상 공간" }
-            ]
+            title: "\"마음의 본질을 꿰뚫는\n과학적인 명상\"",
+            desc: "현존명상센터는 막연한 위로가 아닌,\n마음의 메커니즘을 정확히 이해하고 마음(에고)으로부터 자유로워지는 길을 안내합니다."
         },
+        history: [
+            {
+                year: "2009 ~",
+                contents: [
+                    "요가가 곧 명상임을 알리기 위해 알아차림요가 네이버 까페개설",
+                    "명상 대중화를 위한 저서활동"
+                ]
+            },
+            {
+                year: "2013 ~",
+                contents: ["연남동 소그룹 요가명상 수업"]
+            },
+            {
+                year: "2016 ~",
+                contents: [
+                    "호흡 사마타명상 수업 시작",
+                    "삼선교 명상센터 오픈"
+                ]
+            },
+            {
+                year: "2018 ~",
+                contents: ["도제식 수업을 통해 명상지도자 양성"]
+            },
+            {
+                year: "2024. 8",
+                contents: [
+                    "성북동 명상센터 확장이전 오픈",
+                    "현존명상협동조합 법인설립"
+                ],
+                images: [
+                    "https://cdn.imweb.me/upload/S202405073a922559bbca7/eddddff797469.jpg",
+                    "https://cdn.imweb.me/upload/S202405073a922559bbca7/16af658b35e4a.jpg"
+                ]
+            },
+            {
+                year: "2024. 10",
+                contents: ["성북구 사회적기업 대상 명상특강"]
+            },
+            {
+                year: "2024. 11",
+                contents: ["서울시-국민체육진흥공단 주최 사회적기업 사업비 지원사업 선정"]
+            },
+            {
+                year: "2025. 1",
+                contents: ["국민대생활협동조합 조합원 및 교직원 대상 명상 수업 진행"],
+                images: [
+                    "https://cdn.imweb.me/upload/S202405073a922559bbca7/a84cdd0166d7e.jpg",
+                    "https://cdn.imweb.me/upload/S202405073a922559bbca7/0b32f8d03fb7f.jpg"
+                ]
+            },
+            {
+                year: "2025. 4",
+                contents: ["문화탐방 전문여행사 혜초여행사 전직원 대상(90명) 명상 수업 진행"],
+                images: [
+                    "https://cdn.imweb.me/upload/S202405073a922559bbca7/d9a87a5e92208.jpg",
+                    "https://cdn.imweb.me/upload/S202405073a922559bbca7/960ff79618923.png"
+                ]
+            },
+            {
+                year: "2025. 6",
+                contents: ["성북동 문화탐방 명상프로그램 기획 및 운영"],
+                images: [
+                    "https://cdn.imweb.me/upload/S202405073a922559bbca7/bc4d5bf9f2b46.jpg",
+                    "https://cdn.imweb.me/upload/S202405073a922559bbca7/ad0ae457bde12.png"
+                ]
+            },
+            {
+                year: "2025. 7",
+                contents: ["한국중소벤처기업 주최 소상공인 콘텐츠 제작 지원사업 선정"]
+            },
+            {
+                year: "2025. 11",
+                contents: ["정릉종합사회복지관 주관 새로일하기센터 선생님 대상 명상 수업 진행"],
+                images: [
+                    "https://cdn.imweb.me/upload/S202405073a922559bbca7/d3511471c6872.jpg",
+                    "https://cdn.imweb.me/upload/S202405073a922559bbca7/2cb8604a54e4f.jpg"
+                ]
+            },
+            {
+                year: "2025. 12",
+                contents: ["안양과천교육지원청 평생교육건강과 명상수업 진행"],
+                images: [
+                    "https://cdn.imweb.me/upload/S202405073a922559bbca7/4e2ad83bf428c.jpg",
+                    "https://cdn.imweb.me/upload/S202405073a922559bbca7/e37d0c7888beb.jpg"
+                ]
+            }
+        ],
         founder: {
             badge: "FOUNDER",
             name: "현존 유경",

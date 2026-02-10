@@ -27,7 +27,7 @@ const CenterIntro = () => {
             </section>
 
             {/* Philosophy Section */}
-            <section className="container mx-auto px-6 max-w-4xl mb-20 md:mb-32">
+            <section className="container mx-auto px-6 max-w-6xl mb-20 md:mb-32">
                 <div className="text-center mb-10 md:mb-16">
                     <h2 className="text-2xl md:text-3xl font-bold text-meditation-900 mb-4 md:mb-6 leading-tight break-keep whitespace-pre-wrap">
                         {t.philosophy.title}
@@ -37,16 +37,49 @@ const CenterIntro = () => {
                     </p>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
-                    {t.philosophy.items.map((item, idx) => (
-                        <div key={idx} className="bg-meditation-50 p-6 md:p-8 rounded-3xl text-center hover:shadow-lg transition-transform hover:-translate-y-1">
-                            <div className="w-12 h-12 bg-meditation-200 rounded-full flex items-center justify-center mx-auto mb-4 md:mb-6 text-2xl">{item.icon}</div>
-                            <h3 className="font-bold text-lg md:text-xl text-meditation-900 mb-3 md:mb-4 break-keep">{item.title}</h3>
-                            <p className="text-gray-600 text-sm leading-relaxed break-keep">
-                                {item.desc}
-                            </p>
-                        </div>
-                    ))}
+                <div className="max-w-5xl mx-auto">
+                    <div className="relative">
+                        {/* Timeline vertical line */}
+                        <div className="absolute left-0 md:left-32 top-2 bottom-2 w-0.5 bg-meditation-200 hidden md:block"></div>
+
+                        {t.history && t.history.map((item, idx) => (
+                            <div key={idx} className="flex flex-col md:flex-row gap-6 md:gap-16 mb-12 md:mb-16 relative group">
+                                {/* Dot on timeline */}
+                                <div className="absolute left-[8.0rem] top-3 w-3 h-3 bg-meditation-400 rounded-full border-2 border-white ring-2 ring-meditation-100 hidden md:block z-10 transition-colors group-hover:bg-meditation-600"></div>
+
+                                {/* Year */}
+                                <div className="w-full md:w-32 flex-shrink-0 md:text-right">
+                                    <h3 className="text-2xl font-bold text-meditation-800">{item.year}</h3>
+                                </div>
+
+                                {/* Content */}
+                                <div className="flex-grow">
+                                    <ul className="space-y-3 mb-6">
+                                        {item.contents.map((content, cIdx) => (
+                                            <li key={cIdx} className="text-gray-700 text-lg leading-relaxed font-medium break-keep">
+                                                {content}
+                                            </li>
+                                        ))}
+                                    </ul>
+
+                                    {/* Images */}
+                                    {item.images && item.images.length > 0 && (
+                                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-6">
+                                            {item.images.map((img, imgIdx) => (
+                                                <div key={imgIdx} className="rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300">
+                                                    <img
+                                                        src={img}
+                                                        alt={`History ${item.year}`}
+                                                        className="w-full h-48 md:h-56 object-cover hover:scale-105 transition-transform duration-500"
+                                                    />
+                                                </div>
+                                            ))}
+                                        </div>
+                                    )}
+                                </div>
+                            </div>
+                        ))}
+                    </div>
                 </div>
             </section>
 
