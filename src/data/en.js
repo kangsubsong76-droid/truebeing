@@ -342,7 +342,7 @@ export const en = {
             title: "Our Instructors",
             role: "Asana Meditation Instructor",
             list: [
-                { name: "Suri", quote: "\"Seeing the mind through the body.\"", desc: "Find balance of body and stability of mind with warm and delicate guidance." },
+                { name: "Suri", quote: "\"Transformation of body and inner self through meditation\"", desc: "Find balance of body and inner stability with warm and delicate guidance." },
                 { name: "Heogong", quote: "\"Opening infinite possibilities.\"", desc: "Helping you open your closed mind and experience the expansion of consciousness as wide as the void." },
                 { name: "Zero", quote: "\"Practicing the aesthetics of emptying.\"", desc: "Guiding you to put down complex thoughts and return to the state of Zero." }
             ]
