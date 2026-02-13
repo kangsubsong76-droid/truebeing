@@ -13,9 +13,16 @@ const Footer = () => {
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 mb-8 md:mb-12">
                     <div>
                         <h3 className="text-xl md:text-2xl font-bold text-white mb-4 md:mb-6">{t.title}</h3>
-                        <p className="leading-relaxed opacity-80 text-sm md:text-base whitespace-pre-wrap">
+                        <p className="leading-relaxed opacity-80 text-sm md:text-base whitespace-pre-wrap mb-6">
                             {t.desc}
                         </p>
+                        <a
+                            href="/notice"
+                            className="inline-flex items-center gap-2 text-sm font-bold text-white hover:text-meditation-200 transition-all border-b border-white/20 pb-1 hover:border-meditation-200"
+                        >
+                            <span className="w-1.5 h-1.5 rounded-full bg-meditation-400"></span>
+                            공지사항 (Notice)
+                        </a>
                     </div>
                     <div className="md:col-span-1">
                         <h4 className="text-lg font-bold text-white mb-4 md:mb-6">{t.contactTitle}</h4>

@@ -469,5 +469,25 @@ export const en = {
                 text: "Menopause came a little earlier due to the aftereffects of receiving the vaccine. Lethargy and depression came, so I tried to use hormone medicine, but taking medicine every day reached its limit and side effects occurred. I stopped the medicine and continued meditation consistently. <mark>My life pattern and eating habits changed and I am slowly changing.</mark> Even if the body hurts or lethargy or depression comes back, I have gained the <mark>strength to recover quickly</mark> without being stuck in it for a long time like before."
             }
         ]
+    },
+    notice: {
+        title: "Notice",
+        subtitle: "Latest news from Truebeing Meditation Center.",
+        more: "View Details",
+        list: [
+            {
+                id: 1,
+                date: "2026.02.02",
+                title: "Lunar New Year Class Schedule (feat. Intensive Practice)",
+                content: "● Lunar New Year Schedule\n\n* Feb 14 (Sat) 11:00 AM ~ 3:00 PM Intensive Practice\n* Feb 15 ~ 17 Center Closed (All classes cancelled)\n* Feb 18 (Wed) 11:00 AM ~ 12:30 PM Combined Asana & Samatha Class\n  1:00 PM ~ 3:00 PM Master Course\n\nRegular classes during the holiday are replaced by intensive and combined sessions. Please note that make-up classes or extensions are not possible if you cannot attend.\n\n\n● Intensive Practice Details\n\n1. Schedule\n- Arrival: 10-20 mins before start\n- Practice: 11:00 AM ~ 3:00 PM\n- Tea & Feedback: After 3 PM (Optional)\n\n2. Course\nNadi Shodhana - Prostration - Savasana - Viparita Karani Mudra - Tibetan Yoga - Savasana - Sitting Meditation - Om Mantra\n\n3. Location: Truebeing Meditation Center\n\n4. Eligibility: Active students as of Feb 14\n(Must be able to practice the course fully without guidance)\n\n5. Enrollment: Max 15 people (First come, first served). Please apply via comment below.\n\n6. Requirements\nEmpty stomach / Yoga towel / 10 mins early arrival / Phone OFF / Snacks (optional)\np.s: Avoid drinking too much water before practice."
+            }
+        ]
+    },
+    popup: {
+        title: "Lunar New Year Schedule",
+        date: "2/14 (Sat) Intensive Practice",
+        content: "• 2/14(Sat): 11:00 AM ~ 3:00 PM Intensive Practice\n• 2/15~17: Center Closed\n• 2/18(Wed): Morning Combined / Afternoon Master Course\n\n※ Intensive practice is by reservation only (Max 15).",
+        closeMsg: "Don't show today",
+        linkMsg: "View Notice"
     }
 };

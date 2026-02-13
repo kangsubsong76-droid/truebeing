@@ -15,6 +15,8 @@ import CenterIntro from './components/CenterIntro';
 import MeditationArchive from './components/MeditationArchive';
 import ContactPage from './components/ContactPage';
 import CorporateEducation from './components/CorporateEducation';
+import NoticePage from './components/NoticePage';
+import NoticePopup from './components/NoticePopup';
 
 import { LanguageProvider } from './contexts/LanguageContext';
 
@@ -34,6 +36,7 @@ function App() {
             <div className="font-sans antialiased text-gray-900 bg-white">
                 <ScrollToTop />
                 <Navbar />
+                <NoticePopup />
                 <main>
                     <Routes>
                         <Route path="/" element={
@@ -53,6 +56,7 @@ function App() {
                         <Route path="/archive" element={<MeditationArchive />} />
                         <Route path="/corporate-education" element={<CorporateEducation />} />
                         <Route path="/contact" element={<ContactPage />} />
+                        <Route path="/notice" element={<NoticePage />} />
                     </Routes>
                 </main>
                 <Footer />
