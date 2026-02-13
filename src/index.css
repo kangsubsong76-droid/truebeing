@@ -44,4 +44,14 @@
   blockquote {
     @apply break-keep;
   }
+
+  mark {
+    background: linear-gradient(120deg, rgba(234, 179, 8, 0.25) 0%, rgba(234, 179, 8, 0.25) 100%);
+    background-repeat: no-repeat;
+    background-size: 100% 40%;
+    background-position: 0 85%;
+    color: inherit;
+    font-weight: 600;
+    padding: 0 2px;
+  }
 }

@@ -440,5 +440,34 @@ export const en = {
         followTitle: "Follow Us",
         copyright: "© 2024 Truebeing Meditation Center. All rights reserved.",
         businessInfo: "Business License : 391-88-03105 | Truebeing Meditation Coop (Director: Suwan Woo)"
+    },
+    testimonials: {
+        title: "Students' Honest Stories",
+        subtitle: "Sharing daily life changes with Truebeing Meditation Center.",
+        tags: [
+            "Great personalized guidance",
+            "Passionate instructors",
+            "Small group classes",
+            "Suitable for beginners",
+            "Systematic classes",
+            "Clean facilities"
+        ],
+        list: [
+            {
+                author: "gui****",
+                date: "1 year student",
+                text: "I started to look at myself and difficult situations in daily life. <mark>Thanks to the passionate classes of the instructors, I am grateful and satisfied to see myself growing little by little.</mark> There is joy in going to the Truebeing Meditation Center even in a busy daily life to live my best self rather than being the best. I am also receiving a lot of help through the fellow practitioners."
+            },
+            {
+                author: "Bo***",
+                date: "Office worker",
+                text: "Under endless work and fatigue that I endured day by day, no matter how much I rested, it didn't feel like resting and I think I was getting more exhausted. Then I happened to know about the Truebeing Meditation Center classes, through which <mark>I am getting to know my true self and experience what true rest and recovery are.</mark> After the mind settles in a calm and neat space, it feels like entering a new dimension."
+            },
+            {
+                author: "Samatha Student",
+                date: "Regular registration",
+                text: "Menopause came a little earlier due to the aftereffects of receiving the vaccine. Lethargy and depression came, so I tried to use hormone medicine, but taking medicine every day reached its limit and side effects occurred. I stopped the medicine and continued meditation consistently. <mark>My life pattern and eating habits changed and I am slowly changing.</mark> Even if the body hurts or lethargy or depression comes back, I have gained the <mark>strength to recover quickly</mark> without being stuck in it for a long time like before."
+            }
+        ]
     }
 };

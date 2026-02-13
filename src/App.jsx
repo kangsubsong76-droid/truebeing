@@ -4,6 +4,7 @@ import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Introduction from './components/Introduction';
 import EffectsSection from './components/EffectsSection';
+import TestimonialsSection from './components/TestimonialsSection';
 import ProgramSection from './components/ProgramSection';
 import VideoSection from './components/VideoSection';
 import GallerySection from './components/GallerySection';
@@ -40,6 +41,7 @@ function App() {
                                 <Hero />
                                 <Introduction />
                                 <EffectsSection />
+                                <TestimonialsSection />
                                 <ProgramSection />
                                 <VideoSection />
                                 <GallerySection />
