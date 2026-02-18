@@ -30,13 +30,20 @@ function ScrollToTop() {
     return null;
 }
 
+import AdminGate from './admin/AdminGate';
+import AdminApp from './admin/App';
+import './admin/index.css';
+
 function App() {
+    const location = useLocation();
+    const isAdminPath = location.pathname.startsWith('/admin-cms');
+
     return (
         <LanguageProvider>
-            <div className="font-sans antialiased text-gray-900 bg-white">
+            <div className={`font-sans antialiased ${isAdminPath ? 'bg-[#050b18]' : 'text-gray-900 bg-white'}`}>
                 <ScrollToTop />
-                <Navbar />
-                <NoticePopup />
+                {!isAdminPath && <Navbar />}
+                {!isAdminPath && <NoticePopup />}
                 <main>
                     <Routes>
                         <Route path="/" element={
@@ -57,9 +64,16 @@ function App() {
                         <Route path="/corporate-education" element={<CorporateEducation />} />
                         <Route path="/contact" element={<ContactPage />} />
                         <Route path="/notice" element={<NoticePage />} />
+
+                        {/* Admin Route */}
+                        <Route path="/admin-cms/*" element={
+                            <AdminGate>
+                                <AdminApp />
+                            </AdminGate>
+                        } />
                     </Routes>
                 </main>
-                <Footer />
+                {!isAdminPath && <Footer />}
             </div>
         </LanguageProvider>
     );

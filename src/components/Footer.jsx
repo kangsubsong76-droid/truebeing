@@ -23,6 +23,14 @@ const Footer = () => {
                             <span className="w-1.5 h-1.5 rounded-full bg-meditation-400"></span>
                             공지사항 (Notice)
                         </a>
+                        <br />
+                        <a
+                            href="/admin-cms"
+                            className="inline-flex items-center gap-2 text-[10px] font-bold text-white/40 hover:text-emerald-500 transition-all mt-4 mb-2"
+                        >
+                            <span className="w-1 h-1 rounded-full bg-white/20"></span>
+                            내부관리페이지
+                        </a>
                     </div>
                     <div className="md:col-span-1">
                         <h4 className="text-lg font-bold text-white mb-4 md:mb-6">{t.contactTitle}</h4>
