@@ -440,4 +440,31 @@
         backdrop-filter: blur(24px);
         -webkit-backdrop-filter: blur(24px);
     }
+
+    /* Media Queries for Responsiveness */
+    @media (min-width: 1024px) {
+        .lg\:flex {
+            display: flex;
+        }
+
+        .lg\:relative {
+            position: relative;
+        }
+
+        .lg\:grid-cols-3 {
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+        }
+
+        .lg\:grid-cols-4 {
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+        }
+
+        .lg\:p-8 {
+            padding: 2rem;
+        }
+
+        .lg\:p-10 {
+            padding: 2.5rem;
+        }
+    }
 }
