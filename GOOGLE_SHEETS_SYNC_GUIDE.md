@@ -103,7 +103,8 @@ function syncAllData() {
     headers: {
       'apikey': SUPABASE_KEY,
       'Authorization': 'Bearer ' + SUPABASE_KEY,
-      'Prefer': 'resolution=merge-duplicates' // 중복 시 업데이트 (Upsert)
+      'Prefer': 'resolution=merge-duplicates', // 중복 시 업데이트 (Upsert)
+      'User-Agent': 'TrueBeing-Sync-Bot/1.0'   // 브라우저로 오인받지 않기 위한 식별자
     },
     payload: JSON.stringify(payload),
     muteHttpExceptions: true

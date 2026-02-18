@@ -110,6 +110,33 @@ const SettingsView = ({ settings, setSettings }) => {
                                     ))}
                                 </div>
                             </div>
+
+                            <div className="mt-12 pt-12 border-t border-white/5">
+                                <label className="text-[11px] font-black text-slate-500 uppercase tracking-widest block mb-8 px-1">모바일 네비게이션 스타일</label>
+                                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                    {[
+                                        { id: 'drawer', label: '드로워 메뉴', desc: '기존 왼쪽 사이드바 형태 (버튼으로 열기)' },
+                                        { id: 'bottom', label: '하단 바 메뉴', desc: '스마트폰 하단에 고정된 메뉴 (화면 넓게 사용)' }
+                                    ].map(style => (
+                                        <div
+                                            key={style.id}
+                                            onClick={() => setSettings(prev => ({ ...prev, mobileNavStyle: style.id }))}
+                                            className={`p-7 rounded-[2rem] border transition-all duration-500 cursor-pointer flex flex-col gap-2 relative overflow-hidden group/opt ${settings.mobileNavStyle === style.id
+                                                ? 'bg-emerald-500/5 border-emerald-500/20 shadow-[0_20px_40px_-10px_rgba(16,185,129,0.1)]'
+                                                : 'bg-[#050b18]/40 border-white/5 hover:border-white/10 hover:bg-[#050b18]/60'
+                                                }`}
+                                        >
+                                            <div className="flex justify-between items-center mb-1">
+                                                <p className={`font-black text-base ${settings.mobileNavStyle === style.id ? 'text-emerald-400' : 'text-slate-300'}`}>{style.label}</p>
+                                                <div className={`w-5 h-5 rounded-full border-2 flex items-center justify-center transition-all ${settings.mobileNavStyle === style.id ? 'border-emerald-500 bg-emerald-500/20' : 'border-slate-700'}`}>
+                                                    {settings.mobileNavStyle === style.id && <div className="w-2.5 h-2.5 bg-emerald-500 rounded-full"></div>}
+                                                </div>
+                                            </div>
+                                            <p className="text-[11px] text-slate-500 font-bold leading-relaxed">{style.desc}</p>
+                                        </div>
+                                    ))}
+                                </div>
+                            </div>
                         </div>
                     </motion.div>
 

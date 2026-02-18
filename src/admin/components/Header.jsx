@@ -1,5 +1,5 @@
 import React from 'react';
-import { Search, Bell, FileSpreadsheet, ArrowDownToLine, RefreshCw, Database } from 'lucide-react';
+import { Search, Bell, FileSpreadsheet, ArrowDownToLine, RefreshCw, Database, Menu } from 'lucide-react';
 import * as XLSX from 'xlsx';
 import { supabase } from '../lib/supabase';
 
@@ -16,13 +16,24 @@ const Header = ({
     setFilterType,
     setIsNotifyOpen,
     settings,
-    extraStats
+    extraStats,
+    setIsSidebarOpen
 }) => {
     return (
         <header className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6 mb-10">
-            <div>
-                <h2 className="text-2xl lg:text-3xl font-bold">회원 관리 대시보드</h2>
-                <p className="text-slate-400 mt-1">실시간 회원 현황 및 분석 보고서</p>
+            <div className="flex items-center gap-4">
+                {(settings?.mobileNavStyle !== 'bottom') && (
+                    <button
+                        onClick={() => setIsSidebarOpen(true)}
+                        className="lg:hidden p-2 glass hover:bg-slate-800 transition-all text-slate-400 hover:text-emerald-400"
+                    >
+                        <Menu size={24} />
+                    </button>
+                )}
+                <div>
+                    <h2 className="text-2xl lg:text-3xl font-bold">회원 관리 대시보드</h2>
+                    <p className="text-slate-400 mt-1">실시간 회원 현황 및 분석 보고서</p>
+                </div>
             </div>
             <div className="flex flex-wrap items-center gap-4 lg:gap-6">
                 <button

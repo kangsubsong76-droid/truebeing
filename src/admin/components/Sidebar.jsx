@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Users, UserPlus, Settings, PieChart as PieChartIcon, MessageSquare, CheckCircle, Home, LogOut } from 'lucide-react';
+import { Users, UserPlus, Settings, PieChart as PieChartIcon, MessageSquare, CheckCircle, Home, LogOut, X } from 'lucide-react';
 
 const SidebarLink = ({ icon: Icon, label, active, onClick }) => (
     <motion.button
@@ -41,9 +41,20 @@ const Sidebar = ({ activeTab, setActiveTab, isSidebarOpen, setIsSidebarOpen, cen
         </div>
     );
 
+    const handleTabChange = (tab) => {
+        setActiveTab(tab);
+        setIsSidebarOpen(false);
+    };
+
     return (
-        <aside className={`${isSidebarOpen ? 'flex' : 'hidden'} lg:flex w-72 glass m-6 mr-0 flex-col overflow-hidden fixed lg:relative z-40 h-[calc(100vh-3rem)] sidebar-border rounded-[2.5rem] shadow-2xl`}>
-            <div className="p-8">
+        <aside className={`${isSidebarOpen ? 'translate-x-0 opacity-100' : '-translate-x-full opacity-0 lg:translate-x-0 lg:opacity-100'} transition-all duration-300 ease-in-out lg:flex w-72 glass m-0 lg:m-6 lg:mr-0 flex-col overflow-hidden fixed lg:relative z-50 h-screen lg:h-[calc(100vh-3rem)] sidebar-border lg:rounded-[2.5rem] shadow-2xl`}>
+            <div className="p-8 relative">
+                <button
+                    onClick={() => setIsSidebarOpen(false)}
+                    className="lg:hidden absolute top-6 right-6 p-2 text-slate-400 hover:text-red-400"
+                >
+                    <X size={24} />
+                </button>
                 <h1 className="text-2xl font-bold flex flex-col">
                     <span className="gradient-text">{centerName || '현존명상센터'}</span>
                     <span className="text-sm text-slate-300">멤버십 시스템</span>
@@ -53,12 +64,12 @@ const Sidebar = ({ activeTab, setActiveTab, isSidebarOpen, setIsSidebarOpen, cen
 
             <nav className="flex-1 mt-4">
                 <div className="px-6 mb-2 text-[10px] font-black text-slate-600 uppercase tracking-widest">메인 메뉴</div>
-                <SidebarLink icon={Users} label="회원 리포트" active={activeTab === 'members'} onClick={() => setActiveTab('members')} />
-                <SidebarLink icon={CheckCircle} label="출석 체크" active={activeTab === 'attendance'} onClick={() => setActiveTab('attendance')} />
-                <SidebarLink icon={MessageSquare} label="메시지 발송" active={activeTab === 'sms'} onClick={() => setActiveTab('sms')} />
-                <SidebarLink icon={UserPlus} label="신규 등록" active={activeTab === 'add'} onClick={() => setActiveTab('add')} />
-                <SidebarLink icon={PieChartIcon} label="통계 분석" active={activeTab === 'stats'} onClick={() => setActiveTab('stats')} />
-                <SidebarLink icon={Settings} label="시스템 설정" active={activeTab === 'settings'} onClick={() => setActiveTab('settings')} />
+                <SidebarLink icon={Users} label="회원 리포트" active={activeTab === 'members'} onClick={() => handleTabChange('members')} />
+                <SidebarLink icon={CheckCircle} label="출석 체크" active={activeTab === 'attendance'} onClick={() => handleTabChange('attendance')} />
+                <SidebarLink icon={MessageSquare} label="메시지 발송" active={activeTab === 'sms'} onClick={() => handleTabChange('sms')} />
+                <SidebarLink icon={UserPlus} label="신규 등록" active={activeTab === 'add'} onClick={() => handleTabChange('add')} />
+                <SidebarLink icon={PieChartIcon} label="통계 분석" active={activeTab === 'stats'} onClick={() => handleTabChange('stats')} />
+                <SidebarLink icon={Settings} label="시스템 설정" active={activeTab === 'settings'} onClick={() => handleTabChange('settings')} />
 
                 <div className="mt-10 pt-6 border-t border-white/5">
                     <div className="px-6 mb-4 text-[10px] font-black text-slate-600 uppercase tracking-widest">빠른 설정</div>

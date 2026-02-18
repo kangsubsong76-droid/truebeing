@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { AnimatePresence } from 'framer-motion';
+import { AnimatePresence, motion } from 'framer-motion';
 import { Users, UserPlus, MessageSquare, AlertTriangle, Phone, CheckCircle, PieChart as PieChartIcon } from 'lucide-react';
 import * as XLSX from 'xlsx';
 import { supabase } from './lib/supabase';
@@ -8,6 +8,7 @@ import { sendAligoSMS } from './services/aligo';
 // Extracted Components
 import Sidebar from './components/Sidebar';
 import Header from './components/Header';
+import BottomNav from './components/BottomNav';
 import StatsGrid from './components/StatsGrid';
 import MemberTable from './components/MemberTable';
 import StatsView from './components/StatsView';
@@ -28,7 +29,7 @@ const App = () => {
     const [activeTab, setActiveTab] = useState('members');
     const [searchTerm, setSearchTerm] = useState('');
     const [filterType, setFilterType] = useState('all');
-    const [isSidebarOpen, setIsSidebarOpen] = useState(true);
+    const [isSidebarOpen, setIsSidebarOpen] = useState(typeof window !== 'undefined' ? window.innerWidth > 1024 : true);
     const [isNotifyOpen, setIsNotifyOpen] = useState(false);
     const [selectedMember, setSelectedMember] = useState(null);
     const [isEditingMember, setIsEditingMember] = useState(false);
@@ -47,7 +48,8 @@ const App = () => {
             realtimeUpdate: true,
             showPhotos: false,
             showAdminMemo: true,
-            showSelection: true
+            showSelection: true,
+            mobileNavStyle: 'drawer'
         };
     });
 
@@ -306,19 +308,34 @@ const App = () => {
     const extraStats = realStats.slice(7, 9);
 
     return (
-        <div className="flex min-h-screen bg-[#050b18] text-slate-200 selection:bg-emerald-500/30 font-['GmarketSansMedium']">
-            {/* Sidebar Component */}
-            <Sidebar
-                activeTab={activeTab}
-                setActiveTab={setActiveTab}
-                isSidebarOpen={isSidebarOpen}
-                setIsSidebarOpen={setIsSidebarOpen}
-                centerName={settings.centerName}
-                settings={settings}
-                setSettings={setSettings}
-            />
+        <div className="flex min-h-screen bg-[#050b18] text-slate-200 selection:bg-emerald-500/30 font-['GmarketSansMedium'] overflow-x-hidden">
+            {/* Backdrop for Mobile Sidebar */}
+            <AnimatePresence>
+                {(isSidebarOpen && settings.mobileNavStyle !== 'bottom') && (
+                    <motion.div
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                        onClick={() => setIsSidebarOpen(false)}
+                        className="fixed inset-0 bg-black/60 backdrop-blur-sm z-[60] lg:hidden"
+                    />
+                )}
+            </AnimatePresence>
 
-            <main className="flex-1 min-w-0 h-screen overflow-y-auto relative p-4 lg:p-10 custom-scrollbar">
+            {/* Sidebar Component */}
+            {settings.mobileNavStyle !== 'bottom' && (
+                <Sidebar
+                    activeTab={activeTab}
+                    setActiveTab={setActiveTab}
+                    isSidebarOpen={isSidebarOpen}
+                    setIsSidebarOpen={setIsSidebarOpen}
+                    centerName={settings.centerName}
+                    settings={settings}
+                    setSettings={setSettings}
+                />
+            )}
+
+            <main className={`flex-1 min-w-0 h-screen overflow-y-auto relative p-4 lg:p-10 custom-scrollbar ${settings.mobileNavStyle === 'bottom' ? 'pb-24 lg:pb-10' : ''}`}>
                 <Header
                     handleDownloadExcel={handleDownloadExcel}
                     fetchData={fetchData}
@@ -333,6 +350,7 @@ const App = () => {
                     setIsNotifyOpen={setIsNotifyOpen}
                     settings={settings}
                     extraStats={extraStats}
+                    setIsSidebarOpen={setIsSidebarOpen}
                 />
 
                 {activeTab === 'members' && (
@@ -466,6 +484,11 @@ const App = () => {
                     />
                 )}
             </AnimatePresence>
+
+            {/* Bottom Nav for Mobile */}
+            {settings.mobileNavStyle === 'bottom' && (
+                <BottomNav activeTab={activeTab} setActiveTab={setActiveTab} />
+            )}
 
             {/* Custom Styles */}
             <style dangerouslySetInnerHTML={{
