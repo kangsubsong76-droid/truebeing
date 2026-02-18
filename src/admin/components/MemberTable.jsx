@@ -256,7 +256,8 @@ const MemberTable = ({
                                                     let color = '#94a3b8'; // default slate
 
                                                     if (memo.includes('상담')) color = '#6366f1';
-                                                    else if (memo.includes('1회')) color = '#8b5cf6';
+                                                    else if (memo.includes('1회') || memo.includes('맞춤') || memo.includes('체험')) color = '#8b5cf6';
+                                                    else if (memo.includes('원데이')) color = '#a78bfa';
                                                     else if (memo.includes('지도자')) color = '#f472b6';
 
                                                     return (
@@ -275,8 +276,8 @@ const MemberTable = ({
                                             </div>
                                         )}
 
-                                        <div className="text-slate-500 font-mono text-[11px]">{member.join_date}</div>
-                                        <div className="text-slate-500 font-mono text-[11px]">{member.end_date}</div>
+                                        <div className="text-slate-400 font-mono text-sm font-medium">{member.join_date}</div>
+                                        <div className="text-slate-400 font-mono text-sm font-medium">{member.end_date}</div>
                                         <div className="text-slate-500 truncate text-xs">{member.address}</div>
                                         <div className="text-right">
                                             <button

@@ -6,7 +6,7 @@ const SidebarLink = ({ icon: Icon, label, active, onClick }) => (
     <motion.button
         whileHover={{ x: 5 }}
         onClick={onClick}
-        className={`w-full flex items-center gap-4 px-6 py-4 transition-all ${active ? 'bg-emerald-500/10 border-r-4 border-emerald-500 text-emerald-400' : 'text-slate-400 hover:text-slate-200'
+        className={`w-full flex items-center gap-4 px-6 py-5 transition-all ${active ? 'bg-emerald-500/10 border-r-4 border-emerald-500 text-emerald-400' : 'text-slate-400 hover:text-slate-200'
             }`}
         style={{
             background: active ? 'linear-gradient(90deg, rgba(16, 185, 129, 0.1) 0%, transparent 100%)' : 'transparent',
@@ -31,7 +31,7 @@ const Sidebar = ({ activeTab, setActiveTab, isSidebarOpen, setIsSidebarOpen, cen
     };
 
     const ToggleItem = ({ label, active, onToggle }) => (
-        <div className="flex items-center justify-between px-6 py-2.5 group cursor-pointer" onClick={onToggle}>
+        <div className="flex items-center justify-between px-6 py-3.5 group cursor-pointer" onClick={onToggle}>
             <span className={`text-[13px] font-bold transition-colors ${active ? 'text-emerald-400' : 'text-slate-500 group-hover:text-slate-400'}`}>
                 {label}
             </span>
@@ -73,7 +73,7 @@ const Sidebar = ({ activeTab, setActiveTab, isSidebarOpen, setIsSidebarOpen, cen
                         onToggle={() => handleToggle('showPhotos')}
                     />
                     <ToggleItem
-                        label="관리자 메모 요약"
+                        label="UPCOMING EVENT"
                         active={settings?.showAdminMemo}
                         onToggle={() => handleToggle('showAdminMemo')}
                     />

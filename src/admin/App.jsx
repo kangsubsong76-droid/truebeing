@@ -115,6 +115,29 @@ const App = () => {
         fetchSmsHistory();
     }, []);
 
+    // Realtime Subscription
+    useEffect(() => {
+        let subscription;
+
+        if (settings.realtimeUpdate) {
+            console.log('🔌 Realtime connection established');
+            subscription = supabase
+                .channel('public:members')
+                .on('postgres_changes', { event: '*', schema: 'public', table: 'members' }, (payload) => {
+                    console.log('⚡ Realtime change detected:', payload);
+                    fetchData();
+                })
+                .subscribe();
+        }
+
+        return () => {
+            if (subscription) {
+                console.log('🔌 Realtime connection disconnected');
+                supabase.removeChannel(subscription);
+            }
+        };
+    }, [settings.realtimeUpdate]);
+
     // --- Handlers ---
     const handleAddNewMember = async (e) => {
         e.preventDefault();
@@ -251,6 +274,7 @@ const App = () => {
 
     // --- Derived State ---
     const actualMembers = memberList.filter(m => !(m.memo && m.memo.includes('상담')));
+    const consultationMembers = memberList.filter(m => m.memo && m.memo.includes('상담'));
     const realStats = [
         { label: '전체 회원', value: actualMembers.length, color: '#10b981', icon: Users, filter: 'all' },
         { label: '유효 회원', value: actualMembers.filter(m => ['active', '회원', '정상'].includes(m.status)).length, color: '#34d399', icon: CheckCircle, filter: 'active' },
@@ -265,19 +289,21 @@ const App = () => {
             }).length, color: '#fbbf24', icon: AlertTriangle, filter: 'expiring'
         },
         { label: '만기/마감', value: actualMembers.filter(m => m.status === '만기').length, color: '#f87171', icon: Phone, filter: 'expired' },
-        { label: '1회 수강', value: actualMembers.filter(m => m.memo && m.memo.includes('1회')).length, color: '#8b5cf6', icon: UserPlus, filter: 'one_time' },
+        { label: '맞춤상담/체험', value: actualMembers.filter(m => m.memo && (m.memo.includes('맞춤') || m.memo.includes('체험') || m.memo.includes('1회'))).length, color: '#8b5cf6', icon: UserPlus, filter: 'personal' },
+        { label: '원데이클래스', value: actualMembers.filter(m => m.memo && m.memo.includes('원데이')).length, color: '#a78bfa', icon: UserPlus, filter: 'oneday' },
         { label: '지도자반', value: actualMembers.filter(m => m.memo && m.memo.includes('지도자')).length, color: '#f472b6', icon: PieChartIcon, filter: 'leadership' },
         {
             label: '기타/일반', value: actualMembers.filter(m => {
-                const isKnown = ['active', '회원', '정상', '만기'].includes(m.status) || (m.memo && (m.memo.includes('1회') || m.memo.includes('지도자')));
+                const isKnown = ['active', '회원', '정상', '만기'].includes(m.status) ||
+                    (m.memo && (m.memo.includes('맞춤') || m.memo.includes('체험') || m.memo.includes('1회') || m.memo.includes('원데이') || m.memo.includes('지도자')));
                 return !isKnown;
             }).length, color: '#94a3b8', icon: Users, filter: 'other'
         },
         { label: '상담전화', value: consultationMembers.length, color: '#6366f1', icon: MessageSquare, filter: 'consultation' },
     ];
 
-    const mainStats = realStats.slice(0, 6);
-    const extraStats = realStats.slice(6, 8);
+    const mainStats = realStats.slice(0, 7);
+    const extraStats = realStats.slice(7, 9);
 
     return (
         <div className="flex min-h-screen bg-[#050b18] text-slate-200 selection:bg-emerald-500/30 font-['GmarketSansMedium']">

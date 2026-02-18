@@ -24,7 +24,7 @@ const Header = ({
                 <h2 className="text-2xl lg:text-3xl font-bold">회원 관리 대시보드</h2>
                 <p className="text-slate-400 mt-1">실시간 회원 현황 및 분석 보고서</p>
             </div>
-            <div className="flex items-center gap-4 lg:gap-6">
+            <div className="flex flex-wrap items-center gap-4 lg:gap-6">
                 <button
                     className="p-2 glass hover:bg-slate-800 transition-all text-slate-400 hover:text-green-400"
                     title="Google Drive 연동"
@@ -165,45 +165,31 @@ const Header = ({
                         {isUploading ? <RefreshCw size={20} className="animate-spin" /> : <Database size={20} className="text-emerald-500" />}
                     </button>
                 </div>
-                <div className="flex items-center gap-3">
-                    {/* Small Extra Stats */}
-                    <div className="hidden xl:flex items-center gap-4 mr-2">
-                        {extraStats?.map((stat, idx) => (
-                            <div key={idx} className="flex flex-col items-end">
-                                <span className="text-[9px] font-black text-slate-500 uppercase tracking-tighter leading-none mb-1 opacity-70">{stat.label}</span>
-                                <div className="flex items-center gap-1.5">
-                                    <div className="w-1 h-1 rounded-full" style={{ backgroundColor: stat.color }}></div>
-                                    <span className="text-sm font-bold text-white leading-none">{stat.value.toLocaleString()}</span>
-                                </div>
-                            </div>
-                        ))}
-                    </div>
-
-                    <div className="relative">
-                        <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-slate-400" size={18} />
-                        <input
-                            type="text"
-                            placeholder="회원 이름 또는 번호 검색..."
-                            className="glass bg-slate-800/50 border-none pl-10 pr-4 py-2 text-sm focus:ring-2 ring-emerald-500/50 w-64 outline-none"
-                            value={searchTerm}
-                            onChange={(e) => {
-                                const term = e.target.value;
-                                setSearchTerm(term);
-                                if (term.trim()) {
-                                    const filtered = memberList.filter(m =>
-                                        m.name?.includes(term) ||
-                                        m.phone?.includes(term)
-                                    );
-                                    setFilteredList(filtered);
-                                    setFilterType('search');
-                                } else {
-                                    setFilteredList(memberList);
-                                    setFilterType('all');
-                                }
-                            }}
-                        />
-                    </div>
+                <div className="relative">
+                    <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-slate-400" size={18} />
+                    <input
+                        type="text"
+                        placeholder="회원 이름 또는 번호 검색..."
+                        className="glass bg-slate-800/50 border-none pl-10 pr-4 py-2 text-sm focus:ring-2 ring-emerald-500/50 w-32 md:w-64 outline-none transition-all"
+                        value={searchTerm}
+                        onChange={(e) => {
+                            const term = e.target.value;
+                            setSearchTerm(term);
+                            if (term.trim()) {
+                                const filtered = memberList.filter(m =>
+                                    m.name?.includes(term) ||
+                                    m.phone?.includes(term)
+                                );
+                                setFilteredList(filtered);
+                                setFilterType('search');
+                            } else {
+                                setFilteredList(memberList);
+                                setFilterType('all');
+                            }
+                        }}
+                    />
                 </div>
+
                 <button
                     onClick={() => setIsNotifyOpen(true)}
                     className="relative p-2 glass hover:bg-slate-800 transition-colors"
@@ -217,6 +203,37 @@ const Header = ({
                             <span className="absolute top-2 right-2 w-2 h-2 bg-red-500 rounded-full border-2 border-slate-900 animate-pulse"></span>
                         )}
                 </button>
+
+                {/* Small Extra Stats next to Bell */}
+                <div className="flex items-center gap-4 ml-4 md:ml-6">
+                    {extraStats?.map((stat, idx) => (
+                        <button
+                            key={idx}
+                            onClick={() => {
+                                setFilterType(stat.filter);
+                                const actualMembers = memberList.filter(m => !(m.memo && m.memo.includes('상담')));
+                                const consultationMembers = memberList.filter(m => m.memo && m.memo.includes('상담'));
+
+                                if (stat.filter === 'consultation') {
+                                    setFilteredList(consultationMembers);
+                                } else if (stat.filter === 'other') {
+                                    setFilteredList(actualMembers.filter(m => {
+                                        const isKnown = ['active', '회원', '정상', '만기'].includes(m.status) ||
+                                            (m.memo && (m.memo.includes('맞춤') || m.memo.includes('체험') || m.memo.includes('1회') || m.memo.includes('원데이') || m.memo.includes('지도자')));
+                                        return !isKnown;
+                                    }));
+                                }
+                            }}
+                            className="flex flex-col items-end hover:bg-white/5 p-1 px-2 rounded-lg transition-colors group"
+                        >
+                            <span className="text-[9px] font-black text-slate-500 uppercase tracking-tighter leading-none mb-1 opacity-70 group-hover:opacity-100">{stat.label}</span>
+                            <div className="flex items-center gap-1.5">
+                                <div className="w-1 h-1 rounded-full" style={{ backgroundColor: stat.color }}></div>
+                                <span className="text-sm font-bold text-white leading-none">{stat.value.toLocaleString()}</span>
+                            </div>
+                        </button>
+                    ))}
+                </div>
             </div>
         </header>
     );
