@@ -40,11 +40,11 @@ function App() {
 
     return (
         <LanguageProvider>
-            <div className={`font-sans antialiased ${isAdminPath ? 'bg-[#050b18]' : 'text-gray-900 bg-white'}`}>
+            <div className={`font-sans antialiased min-h-screen flex flex-col ${isAdminPath ? 'bg-[#050b18]' : 'text-gray-900 bg-white'}`}>
                 <ScrollToTop />
                 {!isAdminPath && <Navbar />}
                 {!isAdminPath && <NoticePopup />}
-                <main>
+                <main className={isAdminPath ? "" : "flex-grow"}>
                     <Routes>
                         <Route path="/" element={
                             <>
