@@ -20,6 +20,10 @@ import NoticePopup from './components/NoticePopup';
 
 import { LanguageProvider } from './contexts/LanguageContext';
 
+import AdminGate from './admin/AdminGate';
+import AdminApp from './admin/App';
+import './admin/index.css';
+
 function ScrollToTop() {
     const { pathname } = useLocation();
 
@@ -29,10 +33,6 @@ function ScrollToTop() {
 
     return null;
 }
-
-import AdminGate from './admin/AdminGate';
-import AdminApp from './admin/App';
-import './admin/index.css';
 
 function App() {
     const location = useLocation();
