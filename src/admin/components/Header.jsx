@@ -15,7 +15,8 @@ const Header = ({
     setFilteredList,
     setFilterType,
     setIsNotifyOpen,
-    settings
+    settings,
+    extraStats
 }) => {
     return (
         <header className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6 mb-10">
@@ -164,29 +165,44 @@ const Header = ({
                         {isUploading ? <RefreshCw size={20} className="animate-spin" /> : <Database size={20} className="text-emerald-500" />}
                     </button>
                 </div>
-                <div className="relative">
-                    <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-slate-400" size={18} />
-                    <input
-                        type="text"
-                        placeholder="회원 이름 또는 번호 검색..."
-                        className="glass bg-slate-800/50 border-none pl-10 pr-4 py-2 text-sm focus:ring-2 ring-emerald-500/50 w-64 outline-none"
-                        value={searchTerm}
-                        onChange={(e) => {
-                            const term = e.target.value;
-                            setSearchTerm(term);
-                            if (term.trim()) {
-                                const filtered = memberList.filter(m =>
-                                    m.name?.includes(term) ||
-                                    m.phone?.includes(term)
-                                );
-                                setFilteredList(filtered);
-                                setFilterType('search');
-                            } else {
-                                setFilteredList(memberList);
-                                setFilterType('all');
-                            }
-                        }}
-                    />
+                <div className="flex items-center gap-3">
+                    {/* Small Extra Stats */}
+                    <div className="hidden xl:flex items-center gap-4 mr-2">
+                        {extraStats?.map((stat, idx) => (
+                            <div key={idx} className="flex flex-col items-end">
+                                <span className="text-[9px] font-black text-slate-500 uppercase tracking-tighter leading-none mb-1 opacity-70">{stat.label}</span>
+                                <div className="flex items-center gap-1.5">
+                                    <div className="w-1 h-1 rounded-full" style={{ backgroundColor: stat.color }}></div>
+                                    <span className="text-sm font-bold text-white leading-none">{stat.value.toLocaleString()}</span>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+
+                    <div className="relative">
+                        <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-slate-400" size={18} />
+                        <input
+                            type="text"
+                            placeholder="회원 이름 또는 번호 검색..."
+                            className="glass bg-slate-800/50 border-none pl-10 pr-4 py-2 text-sm focus:ring-2 ring-emerald-500/50 w-64 outline-none"
+                            value={searchTerm}
+                            onChange={(e) => {
+                                const term = e.target.value;
+                                setSearchTerm(term);
+                                if (term.trim()) {
+                                    const filtered = memberList.filter(m =>
+                                        m.name?.includes(term) ||
+                                        m.phone?.includes(term)
+                                    );
+                                    setFilteredList(filtered);
+                                    setFilterType('search');
+                                } else {
+                                    setFilteredList(memberList);
+                                    setFilterType('all');
+                                }
+                            }}
+                        />
+                    </div>
                 </div>
                 <button
                     onClick={() => setIsNotifyOpen(true)}

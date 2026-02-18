@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Users, UserPlus, Settings, PieChart as PieChartIcon, MessageSquare, LogOut, CheckCircle, Home } from 'lucide-react';
+import { Users, UserPlus, Settings, PieChart as PieChartIcon, MessageSquare, CheckCircle, Home } from 'lucide-react';
 
 const SidebarLink = ({ icon: Icon, label, active, onClick }) => (
     <motion.button
@@ -21,13 +21,6 @@ const SidebarLink = ({ icon: Icon, label, active, onClick }) => (
 const Sidebar = ({ activeTab, setActiveTab, isSidebarOpen, setIsSidebarOpen, centerName, settings, setSettings }) => {
     const handleToggle = (key) => {
         setSettings(prev => ({ ...prev, [key]: !prev[key] }));
-    };
-
-    const handleLogout = () => {
-        if (confirm('시스템을 잠그고 로그아웃 하시겠습니까?')) {
-            sessionStorage.removeItem('admin_authenticated');
-            window.location.href = '/';
-        }
     };
 
     const ToggleItem = ({ label, active, onToggle }) => (
@@ -85,7 +78,7 @@ const Sidebar = ({ activeTab, setActiveTab, isSidebarOpen, setIsSidebarOpen, cen
                 </div>
             </nav>
 
-            <div className="p-6 space-y-2">
+            <div className="p-6">
                 <a
                     href="/"
                     className="flex items-center gap-3 text-slate-400 hover:text-emerald-400 transition-colors w-full px-2 py-2"
@@ -93,13 +86,6 @@ const Sidebar = ({ activeTab, setActiveTab, isSidebarOpen, setIsSidebarOpen, cen
                     <Home size={18} />
                     <span className="text-sm font-medium">홈페이지로 가기</span>
                 </a>
-                <button
-                    onClick={handleLogout}
-                    className="flex items-center gap-3 text-slate-400 hover:text-rose-400 transition-colors w-full px-2 py-2"
-                >
-                    <LogOut size={18} />
-                    <span className="text-sm font-medium">로그아웃 (잠금)</span>
-                </button>
             </div>
         </aside>
     );

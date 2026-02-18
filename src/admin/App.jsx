@@ -251,8 +251,6 @@ const App = () => {
 
     // --- Derived State ---
     const actualMembers = memberList.filter(m => !(m.memo && m.memo.includes('상담')));
-    const consultationMembers = memberList.filter(m => m.memo && m.memo.includes('상담'));
-
     const realStats = [
         { label: '전체 회원', value: actualMembers.length, color: '#10b981', icon: Users, filter: 'all' },
         { label: '유효 회원', value: actualMembers.filter(m => ['active', '회원', '정상'].includes(m.status)).length, color: '#34d399', icon: CheckCircle, filter: 'active' },
@@ -277,6 +275,9 @@ const App = () => {
         },
         { label: '상담전화', value: consultationMembers.length, color: '#6366f1', icon: MessageSquare, filter: 'consultation' },
     ];
+
+    const mainStats = realStats.slice(0, 6);
+    const extraStats = realStats.slice(6, 8);
 
     return (
         <div className="flex min-h-screen bg-[#050b18] text-slate-200 selection:bg-emerald-500/30 font-['GmarketSansMedium']">
@@ -305,12 +306,13 @@ const App = () => {
                     setFilterType={setFilterType}
                     setIsNotifyOpen={setIsNotifyOpen}
                     settings={settings}
+                    extraStats={extraStats}
                 />
 
                 {activeTab === 'members' && (
                     <>
                         <StatsGrid
-                            realStats={realStats}
+                            realStats={mainStats}
                             filterType={filterType}
                             setFilterType={setFilterType}
                             setFilteredList={setFilteredList}
